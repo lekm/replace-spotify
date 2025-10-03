@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Replacement Research Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background-color: #fdfdfd;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            border-bottom: 1px solid #e8e8e8;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 300;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin: 40px 0 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #2c2c2c;
+            margin: 30px 0 15px 0;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c2c2c;
+            margin: 20px 0 10px 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .requirement-card {
+            border: 1px solid #e8e8e8;
+            padding: 20px;
+            background: #fafafa;
+        }
+
+        .requirement-card h4 {
+            color: #1a1a1a;
+            margin: 0 0 10px 0;
+        }
+
+        .requirement-card p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #e8e8e8;
+        }
+
+        .comparison-table th {
+            background-color: #f8f8f8;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .service-card {
+            border: 1px solid #e8e8e8;
+            margin: 20px 0;
+            background: #fafafa;
+        }
+
+        .service-header {
+            padding: 20px;
+            border-bottom: 1px solid #e8e8e8;
+            background: #f8f8f8;
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ethics-score {
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 3px;
+        }
+
+        .score-high { background: #e8f5e8; color: #2d5a2d; }
+        .score-medium { background: #fff3cd; color: #856404; }
+        .score-low { background: #f8d7da; color: #721c24; }
+
+        .service-content {
+            padding: 20px;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 15px 0;
+        }
+
+        .pros, .cons {
+            padding: 15px;
+            border: 1px solid #e8e8e8;
+        }
+
+        .pros {
+            background: #f8fdf8;
+            border-left: 3px solid #28a745;
+        }
+
+        .cons {
+            background: #fdf8f8;
+            border-left: 3px solid #dc3545;
+        }
+
+        .pros h4, .cons h4 {
+            margin: 0 0 10px 0;
+            font-size: 1rem;
+        }
+
+        .pros h4 { color: #155724; }
+        .cons h4 { color: #721c24; }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        .highlight-box {
+            background: #f8f9fa;
+            border: 1px solid #e8e8e8;
+            border-left: 4px solid #007bff;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .danger-box {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .recommended {
+            border-left-color: #28a745;
+            background: #f8fdf8;
+        }
+
+        .avoid {
+            border-left-color: #dc3545;
+            background: #fdf8f8;
+        }
+
+        .ranking-list {
+            counter-reset: ranking;
+        }
+
+        .ranking-item {
+            counter-increment: ranking;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #e8e8e8;
+            background: #fafafa;
+        }
+
+        .ranking-item::before {
+            content: counter(ranking);
+            background: #6c757d;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .migration-steps {
+            background: #f8f9fa;
+            border: 1px solid #e8e8e8;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .migration-steps h4 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .migration-steps ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .migration-steps li {
+            margin: 8px 0;
+            padding: 5px 0;
+        }
+
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .cost-table th,
+        .cost-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #e8e8e8;
+        }
+
+        .cost-table th {
+            background-color: #f8f8f8;
+            font-weight: 600;
+        }
+
+        .recommended-cost {
+            background-color: #e8f5e8;
+            font-weight: 500;
+        }
+
+        .avoid-cost {
+            background-color: #f8d7da;
+            text-decoration: line-through;
+            color: #6c757d;
+        }
+
+        .final-recommendations {
+            background: #f8f9fa;
+            border: 2px solid #007bff;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .final-recommendations h3 {
+            color: #007bff;
+            margin-top: 0;
+        }
+
+        .rec-item {
+            margin: 15px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .rec-item:last-child {
+            border-bottom: none;
+        }
+
+        .rec-label {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .rec-service {
+            font-weight: 700;
+            color: #007bff;
+        }
+
+        .rec-reason {
+            color: #555;
+            font-size: 0.95rem;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .requirements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.8rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Spotify Replacement Research Report</h1>
+        <p class="subtitle">Comprehensive analysis of music streaming alternatives with ethical considerations</p>
+    </div>
+
+    <div class="section">
+        <h2>Executive Summary</h2>
+        <div class="highlight-box recommended">
+            <h4>Primary Recommendation: Qobuz</h4>
+            <p>Based on comprehensive research into artist compensation, corporate ethics, and technical compatibility, <strong>Qobuz</strong> emerges as the clear choice for users with leftist political values. With the highest artist compensation ($0.022/stream), cleanest corporate record, and strong device compatibility, it represents the best balance of ethics and functionality.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Research Requirements</h2>
+        <div class="requirements-grid">
+            <div class="requirement-card">
+                <h4>Ethical Concerns</h4>
+                <p>Spotify's poor artist compensation and broader political/social issues including military investments and censorship</p>
+            </div>
+            <div class="requirement-card">
+                <h4>Political Values</h4>
+                <p>Socialist, pro-LGBTQI+, land back/decolonisation, tax the rich, defund police</p>
+            </div>
+            <div class="requirement-card">
+                <h4>Budget</h4>
+                <p>Up to $30+ AUD per month</p>
+            </div>
+            <div class="requirement-card">
+                <h4>Technical Setup</h4>
+                <p>iPhone → Sonos (office) / WiiM Pro Plus (home) / Wired CarPlay</p>
+            </div>
+            <div class="requirement-card">
+                <h4>Discovery</h4>
+                <p>Better algorithm than Spotify (which declined post-2018)</p>
+            </div>
+            <div class="requirement-card">
+                <h4>Audio Quality</h4>
+                <p>High-quality downloads preferred over streaming</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Artist Compensation Analysis</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Platform</th>
+                    <th>Per Stream Payment</th>
+                    <th>Relative to Spotify</th>
+                    <th>Ethics Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Qobuz</strong></td>
+                    <td>$0.022</td>
+                    <td>733% higher</td>
+                    <td><span class="ethics-score score-high">Excellent</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Napster</strong></td>
+                    <td>$0.019-$0.021</td>
+                    <td>600% higher</td>
+                    <td><span class="ethics-score score-high">Excellent</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Tidal</strong></td>
+                    <td>$0.013</td>
+                    <td>333% higher</td>
+                    <td><span class="ethics-score score-medium">Concerning</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Apple Music</strong></td>
+                    <td>$0.0056-$0.0078</td>
+                    <td>100% higher</td>
+                    <td><span class="ethics-score score-medium">Mixed</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Deezer</strong></td>
+                    <td>$0.0064</td>
+                    <td>70% higher</td>
+                    <td><span class="ethics-score score-medium">Unknown</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Spotify</strong></td>
+                    <td>$0.003-$0.004</td>
+                    <td>Baseline</td>
+                    <td><span class="ethics-score score-low">Poor</span></td>
+                </tr>
+                <tr>
+                    <td><strong>YouTube Music</strong></td>
+                    <td>$0.0027</td>
+                    <td>25% lower</td>
+                    <td><span class="ethics-score score-low">Poor</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Corporate Ethics & Political Issues (2024)</h2>
+
+        <div class="service-card avoid">
+            <div class="service-header">
+                <h3 class="service-title">
+                    Spotify
+                    <span class="ethics-score score-low">Ethics Score: 2/10</span>
+                </h3>
+            </div>
+            <div class="service-content">
+                <div class="danger-box">
+                    <h4>Major Red Flags</h4>
+                    <ul>
+                        <li><strong>Military Investment:</strong> CEO Daniel Ek invested €600M in Helsing (AI drone/weapons company)</li>
+                        <li><strong>Palestine Censorship:</strong> Removed Palestinian artists under Israeli lobby pressure</li>
+                        <li><strong>Artist Boycotts:</strong> 400+ artists joined "No Music for Genocide" campaign</li>
+                        <li><strong>Political Alignment:</strong> Directly opposes anti-war, pro-Palestine values</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-header">
+                <h3 class="service-title">
+                    Apple Music
+                    <span class="ethics-score score-medium">Ethics Score: 6/10</span>
+                </h3>
+            </div>
+            <div class="service-content">
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Positive Aspects</h4>
+                        <ul>
+                            <li>Historically supportive of LGBTQ+ rights</li>
+                            <li>Diversity initiatives</li>
+                            <li>Broad device compatibility</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Concerning Issues</h4>
+                        <ul>
+                            <li>Massive tax avoidance via Irish subsidiaries</li>
+                            <li>Labor exploitation in factories</li>
+                            <li>NLRB charges for illegal employment contracts</li>
+                            <li>Major DOJ antitrust lawsuit</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card avoid">
+            <div class="service-header">
+                <h3 class="service-title">
+                    Tidal
+                    <span class="ethics-score score-low">Ethics Score: 4/10</span>
+                </h3>
+            </div>
+            <div class="service-content">
+                <div class="warning-box">
+                    <h4>Corporate Instability & Poor Labor Practices</h4>
+                    <ul>
+                        <li><strong>Ownership:</strong> Now majority-owned by Block/Square (Jack Dorsey)</li>
+                        <li><strong>Labor Issues:</strong> Multiple rounds of layoffs (2023-2024)</li>
+                        <li><strong>Authoritarian Management:</strong> "No Jay-Z" discussion ban for employees</li>
+                        <li><strong>Financial Problems:</strong> $297M acquisition deemed "terrible business decision"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card recommended">
+            <div class="service-header">
+                <h3 class="service-title">
+                    Qobuz
+                    <span class="ethics-score score-high">Ethics Score: 9/10</span>
+                </h3>
+            </div>
+            <div class="service-content">
+                <div class="highlight-box">
+                    <h4>Cleanest Corporate Record</h4>
+                    <ul>
+                        <li><strong>Ownership:</strong> French company Xandrie SA, no major scandals found</li>
+                        <li><strong>Ethics:</strong> Gave 100% of new subscriber revenue to artists during COVID-19</li>
+                        <li><strong>Corporate Structure:</strong> European governance standards</li>
+                        <li><strong>Labor:</strong> No significant labor controversies found</li>
+                        <li><strong>Political Alignment:</strong> No major red flags, artist-focused mission</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card avoid">
+            <div class="service-header">
+                <h3 class="service-title">
+                    YouTube Music/Google
+                    <span class="ethics-score score-low">Ethics Score: 3/10</span>
+                </h3>
+            </div>
+            <div class="service-content">
+                <div class="danger-box">
+                    <h4>Anti-LGBTQ+ Trends</h4>
+                    <ul>
+                        <li><strong>Policy Changes:</strong> Removed "gender identity" from hate speech protections (2025)</li>
+                        <li><strong>Discrimination:</strong> Class action lawsuit from LGBTQ+ creators for algorithmic bias</li>
+                        <li><strong>Content Moderation:</strong> Demonetizes LGBTQ+ content, affecting creator livelihoods</li>
+                        <li><strong>Platform Score:</strong> GLAAD safety score dropped from 58 to 41 (2024-2025)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Music Discovery Algorithm Rankings (2024)</h2>
+        <div class="ranking-list">
+            <div class="ranking-item">
+                <div>
+                    <strong>YouTube Music</strong> - Most intelligent AI, highly responsive to user feedback
+                    <br><small>Superior integration with YouTube's vast content library and advanced machine learning</small>
+                </div>
+            </div>
+            <div class="ranking-item">
+                <div>
+                    <strong>Spotify</strong> - Still decent but repetitive, mainstream bias
+                    <br><small>Quality declined post-2018, tends to loop back to popular tracks</small>
+                </div>
+            </div>
+            <div class="ranking-item">
+                <div>
+                    <strong>Tidal</strong> - Excellent for discovering new/emerging artists via curation
+                    <br><small>Strong focus on artist-curated content and exclusive releases</small>
+                </div>
+            </div>
+            <div class="ranking-item">
+                <div>
+                    <strong>Apple Music</strong> - Good integration but tends toward mainstream
+                    <br><small>Adequate suggestions but feels uninspired compared to competitors</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Technical Compatibility Analysis</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Platform</th>
+                    <th>iPhone App</th>
+                    <th>WiiM Pro Plus</th>
+                    <th>Sonos</th>
+                    <th>CarPlay</th>
+                    <th>Audio Quality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Qobuz</strong></td>
+                    <td>✓ Good</td>
+                    <td>✓ Excellent (native)</td>
+                    <td>⚠ Limited</td>
+                    <td>⚠ Frequent crashes & blank screens</td>
+                    <td>✓ FLAC 24-bit/192kHz</td>
+                </tr>
+                <tr>
+                    <td><strong>Apple Music</strong></td>
+                    <td>✓ Excellent</td>
+                    <td>⚠ Limited (AirPlay 256kbps)</td>
+                    <td>✓ Native support</td>
+                    <td>✓ Full support</td>
+                    <td>⚠ Lossless but no downloads</td>
+                </tr>
+                <tr>
+                    <td><strong>Tidal</strong></td>
+                    <td>✓ Good</td>
+                    <td>✓ Excellent (Tidal Connect)</td>
+                    <td>⚠ Limited</td>
+                    <td>✓ Full support</td>
+                    <td>✓ FLAC 24-bit/192kHz</td>
+                </tr>
+                <tr>
+                    <td><strong>Spotify</strong></td>
+                    <td>✓ Excellent</td>
+                    <td>✓ Good</td>
+                    <td>✓ Native support</td>
+                    <td>✓ Full support</td>
+                    <td>⚠ Standard quality only</td>
+                </tr>
+                <tr>
+                    <td><strong>YouTube Music</strong></td>
+                    <td>✓ Good</td>
+                    <td>✓ Good (Google Cast)</td>
+                    <td>⚠ Limited</td>
+                    <td>✓ Good</td>
+                    <td>⚠ Standard quality only</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Deep Dive: Navidrome Self-Hosted Music Server</h2>
+
+        <div class="highlight-box">
+            <h4>What is Navidrome?</h4>
+            <p>Navidrome is a lightweight, self-hosted music streaming server that gives you complete control over your music collection. It's an open-source alternative to proprietary services that puts you in charge of your data while offering a modern, user-friendly interface.</p>
+        </div>
+
+        <h3>Key Benefits for Your Use Case</h3>
+
+        <div class="service-card recommended">
+            <div class="service-header">
+                <h3 class="service-title">Complete Privacy & Control</h3>
+            </div>
+            <div class="service-content">
+                <ul>
+                    <li><strong>No tracking:</strong> Your listening habits aren't monitored, monetized, or sold</li>
+                    <li><strong>Your data:</strong> Music collection stays on your hardware, no third-party access</li>
+                    <li><strong>No ads:</strong> Never interrupted by advertisements</li>
+                    <li><strong>Permanent access:</strong> Songs can't disappear due to licensing changes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-header">
+                <h3 class="service-title">Perfect for Record Collectors</h3>
+            </div>
+            <div class="service-content">
+                <ul>
+                    <li><strong>Digital + Physical:</strong> Stream your vinyl rips alongside purchased digital files</li>
+                    <li><strong>Custom organization:</strong> Organize music exactly how you want it</li>
+                    <li><strong>High-quality formats:</strong> Supports FLAC, MP3, OGG, and more</li>
+                    <li><strong>Metadata control:</strong> Fix and customize all your music information</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>iPhone & CarPlay Integration</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>iOS App</th>
+                    <th>Cost</th>
+                    <th>CarPlay Support</th>
+                    <th>Audio Quality</th>
+                    <th>Recommendation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="recommended-cost">
+                    <td><strong>play:Sub Music Streamer</strong></td>
+                    <td>$5-10</td>
+                    <td>✓ Excellent integration</td>
+                    <td>✓ FLAC, lossless playback</td>
+                    <td>✓ Recommended for CarPlay</td>
+                </tr>
+                <tr>
+                    <td><strong>Amperfy</strong></td>
+                    <td>Free (Open Source)</td>
+                    <td>⚠ Limited navigation</td>
+                    <td>✓ Gapless playback</td>
+                    <td>⚠ Good but limited</td>
+                </tr>
+                <tr>
+                    <td><strong>iSub</strong></td>
+                    <td>Free</td>
+                    <td>⚠ Basic support</td>
+                    <td>✓ Standard quality</td>
+                    <td>⚠ Backup option only</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight-box">
+            <h4>CarPlay Performance with Navidrome</h4>
+            <p><strong>play:Sub provides excellent CarPlay integration that's more reliable than Qobuz</strong>. Users describe the combination as "amazingly stable" and the "best combo ever" with Navidrome. This makes it superior to Qobuz's problematic CarPlay implementation.</p>
+        </div>
+
+        <h3>Setup & Cost Analysis</h3>
+
+        <div class="pros-cons">
+            <div class="pros">
+                <h4>Initial Setup Costs</h4>
+                <ul>
+                    <li><strong>Software:</strong> Free (open source)</li>
+                    <li><strong>Hardware:</strong> $50-500+ (Raspberry Pi to dedicated server)</li>
+                    <li><strong>iOS app:</strong> $5-10 for play:Sub</li>
+                    <li><strong>Domain/SSL:</strong> $10-20/year (optional)</li>
+                </ul>
+            </div>
+            <div class="cons">
+                <h4>Ongoing Costs</h4>
+                <ul>
+                    <li><strong>Electricity:</strong> Minimal (few dollars/month)</li>
+                    <li><strong>Internet:</strong> Uses existing connection</li>
+                    <li><strong>Maintenance:</strong> Your time for updates</li>
+                    <li><strong>Music purchases:</strong> Cost of building collection</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Integration with Your Setup</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Device</th>
+                    <th>Compatibility</th>
+                    <th>Quality</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>WiiM Pro Plus</strong></td>
+                    <td>✓ Excellent</td>
+                    <td>✓ Full hi-res audio</td>
+                    <td>Via Subsonic API</td>
+                </tr>
+                <tr>
+                    <td><strong>Sonos</strong></td>
+                    <td>⚠ Limited</td>
+                    <td>⚠ AirPlay quality</td>
+                    <td>Use AirPlay workaround</td>
+                </tr>
+                <tr>
+                    <td><strong>CarPlay</strong></td>
+                    <td>✓ Excellent</td>
+                    <td>✓ Full quality</td>
+                    <td>Via play:Sub app</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight-box">
+            <h4>Complete Navidrome Setup Guide Available</h4>
+            <p>For detailed instructions on hardware requirements, VPS hosting, multi-user setup, and complete configuration, see our comprehensive guide:</p>
+            <p><a href="navidrome-setup-guide.html" style="color: #007bff; font-weight: bold; text-decoration: none; border: 1px solid #007bff; padding: 8px 16px; border-radius: 4px; display: inline-block; margin-top: 10px;">📖 Complete Navidrome Setup Guide →</a></p>
+        </div>
+
+        <div class="final-recommendations">
+            <h3>Why Navidrome + Qobuz is the Ultimate Solution</h3>
+
+            <div class="rec-item">
+                <div class="rec-label">Best of Both Worlds:</div>
+                <div class="rec-reason">
+                    <strong>1. Navidrome for owned music:</strong> Complete control, perfect quality, zero ongoing costs<br>
+                    <strong>2. Qobuz for discovery:</strong> Ethical streaming, high artist compensation, new music exploration<br>
+                    <strong>3. Seamless integration:</strong> Switch between owned and streamed content in the same apps
+                </div>
+            </div>
+
+            <div class="rec-item">
+                <div class="rec-label">Long-term Benefits:</div>
+                <div class="rec-reason">
+                    • <strong>Future-proof:</strong> Own your music regardless of service changes<br>
+                    • <strong>Cost control:</strong> Buy only music you truly love<br>
+                    • <strong>Quality assurance:</strong> No compression artifacts<br>
+                    • <strong>Privacy:</strong> Most listening tracked locally
+                </div>
+            </div>
+
+            <div class="rec-item">
+                <div class="rec-label">Alignment with Your Values:</div>
+                <div class="rec-reason">
+                    • <strong>Anti-corporate:</strong> Reduce dependence on streaming giants<br>
+                    • <strong>Pro-artist:</strong> Buy music directly from artists when possible<br>
+                    • <strong>Sustainability:</strong> Reduce bandwidth usage through local streaming<br>
+                    • <strong>Community:</strong> Support open-source software development
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Detailed Analysis: Qobuz CarPlay Issues</h2>
+
+        <div class="danger-box">
+            <h4>Significant CarPlay Reliability Problems</h4>
+            <p>Research reveals widespread issues with Qobuz CarPlay functionality that significantly impact daily usability:</p>
+        </div>
+
+        <div class="service-card avoid">
+            <div class="service-header">
+                <h3 class="service-title">Major CarPlay Issues</h3>
+            </div>
+            <div class="service-content">
+                <ul>
+                    <li><strong>Frequent crashes:</strong> App crashes when attempting to play tracks</li>
+                    <li><strong>Blank screens:</strong> Albums, artists, and favorites sections show empty screens</li>
+                    <li><strong>Connection drops:</strong> Playback stops after ~15 seconds, requiring manual restart</li>
+                    <li><strong>Navigation problems:</strong> Requires multiple taps to activate app</li>
+                    <li><strong>Inconsistent behavior:</strong> Works sometimes, fails others with no clear pattern</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>CarPlay Reliability Comparison</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Reliability</th>
+                    <th>User Experience</th>
+                    <th>Common Issues</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="recommended-cost">
+                    <td><strong>Apple Music</strong></td>
+                    <td>Excellent</td>
+                    <td>Native integration, deep Siri support</td>
+                    <td>Minimal issues</td>
+                </tr>
+                <tr>
+                    <td><strong>Spotify</strong></td>
+                    <td>Good</td>
+                    <td>Intuitive interface, voice control</td>
+                    <td>Occasional connection issues</td>
+                </tr>
+                <tr>
+                    <td><strong>Navidrome (play:Sub)</strong></td>
+                    <td>Excellent</td>
+                    <td>Stable, responsive interface</td>
+                    <td>Rare playback issues</td>
+                </tr>
+                <tr class="avoid-cost">
+                    <td><strong>Qobuz</strong></td>
+                    <td>Poor</td>
+                    <td>Frequent crashes and blank screens</td>
+                    <td>Multiple daily failures</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="warning-box">
+            <h4>Impact on Daily Use</h4>
+            <p>For users who rely heavily on CarPlay (extensive car use as mentioned in requirements), Qobuz's reliability issues could be a significant problem. The Navidrome + play:Sub combination offers superior CarPlay reliability while maintaining ethical music consumption through strategic use of Qobuz for discovery only.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Migration Strategy</h2>
+        <div class="migration-steps">
+            <h4>Immediate Steps (Updated for Ethical Analysis)</h4>
+            <ol>
+                <li>Use <strong>Soundiiz</strong> or <strong>FreeYourMusic</strong> to export all Spotify playlists</li>
+                <li>Test <strong>Qobuz</strong> free trial for ethics + audio quality + WiiM Pro Plus compatibility</li>
+                <li>Test <strong>Apple Music</strong> free trial as backup option for broader compatibility</li>
+                <li><s>Test Tidal</s> - Skip due to corporate instability and labor issues</li>
+            </ol>
+        </div>
+
+        <div class="migration-steps">
+            <h4>Hybrid Implementation (Updated)</h4>
+            <ol>
+                <li>Set up Navidrome server for owned music collection</li>
+                <li>Choose <strong>Qobuz</strong> as primary streaming service for ethical discovery</li>
+                <li>Use streaming for discovery → purchase favorites directly from artists when possible</li>
+                <li>Maintain playlists across both platforms using Soundiiz</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Cost Analysis (AUD Monthly)</h2>
+        <table class="cost-table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Monthly Cost (AUD)</th>
+                    <th>Annual Cost (AUD)</th>
+                    <th>Recommendation</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="recommended-cost">
+                    <td><strong>Qobuz Studio</strong></td>
+                    <td>~$25-30</td>
+                    <td>$300-360</td>
+                    <td>✓ RECOMMENDED</td>
+                    <td>Highest ethics score</td>
+                </tr>
+                <tr>
+                    <td><strong>Apple Music</strong></td>
+                    <td>~$12</td>
+                    <td>$144</td>
+                    <td>⚠ BACKUP OPTION</td>
+                    <td>Mixed ethics</td>
+                </tr>
+                <tr class="avoid-cost">
+                    <td><strong>Spotify Premium</strong></td>
+                    <td>$15.99</td>
+                    <td>$192</td>
+                    <td>✗ NOT RECOMMENDED</td>
+                    <td>Ethical issues</td>
+                </tr>
+                <tr class="avoid-cost">
+                    <td><strong>Tidal HiFi Plus</strong></td>
+                    <td>~$20-25</td>
+                    <td>$240-300</td>
+                    <td>✗ AVOID</td>
+                    <td>Labor issues</td>
+                </tr>
+                <tr class="avoid-cost">
+                    <td><strong>YouTube Music Premium</strong></td>
+                    <td>~$12</td>
+                    <td>$144</td>
+                    <td>✗ AVOID</td>
+                    <td>LGBTQ+ discrimination</td>
+                </tr>
+                <tr class="recommended-cost">
+                    <td><strong>Navidrome + Qobuz Hybrid</strong></td>
+                    <td>$12-15 server + selective Qobuz</td>
+                    <td>$159-180 + music purchases</td>
+                    <td>✓ OPTIMAL</td>
+                    <td>Maximum ethics + control</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="final-recommendations">
+        <h3>Final Recommendations (Updated for Leftist Values)</h3>
+
+        <div class="rec-item">
+            <div class="rec-label">Primary: <span class="rec-service">Qobuz</span></div>
+            <div class="rec-reason">Best alignment with socialist, pro-artist, anti-war values. Highest artist compensation and cleanest corporate record.</div>
+        </div>
+
+        <div class="rec-item">
+            <div class="rec-label">Backup: <span class="rec-service">Apple Music</span></div>
+            <div class="rec-reason">When technical compatibility is essential. Mixed ethics but better than other alternatives.</div>
+        </div>
+
+        <div class="rec-item">
+            <div class="rec-label">Optimal: <span class="rec-service">Navidrome + Qobuz Hybrid</span></div>
+            <div class="rec-reason">Maximum ethics, control, and artist support. Self-hosted music collection with ethical streaming for discovery.</div>
+        </div>
+
+        <div class="rec-item">
+            <div class="rec-label">Avoid: <span class="rec-service">Spotify, Tidal, YouTube Music</span></div>
+            <div class="rec-reason">Spotify (military investment), Tidal (labor issues), YouTube Music (LGBTQ+ discrimination)</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Conclusion</h2>
+        <div class="highlight-box">
+            <p>Based on comprehensive analysis of artist compensation, corporate ethics, technical compatibility, and alignment with leftist political values, <strong>Qobuz emerges as the clear winner</strong>. While it has some technical limitations (smaller catalog, CarPlay issues), the ethical benefits significantly outweigh these concerns.</p>
+
+            <p>The research reveals concerning trends across the streaming industry, with major platforms like Spotify directly contradicting anti-war and pro-Palestine values through military investments and censorship. Qobuz stands out as the only major service with a clean corporate record and genuine commitment to artist compensation.</p>
+
+            <p>For users prioritizing ethics over convenience, the <strong>Navidrome + Qobuz hybrid approach</strong> offers the best long-term solution, combining maximum control over owned music with ethical streaming for discovery.</p>
+        </div>
+    </div>
+</body>
+</html>

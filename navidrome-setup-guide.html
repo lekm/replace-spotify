@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navidrome Complete Setup Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background-color: #fdfdfd;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            border-bottom: 1px solid #e8e8e8;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 300;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #007bff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #007bff;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin: 40px 0 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #2c2c2c;
+            margin: 30px 0 15px 0;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c2c2c;
+            margin: 20px 0 10px 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .highlight-box {
+            background: #f8f9fa;
+            border: 1px solid #e8e8e8;
+            border-left: 4px solid #007bff;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #e8e8e8;
+        }
+
+        .comparison-table th {
+            background-color: #f8f8f8;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .recommended {
+            background-color: #d4edda !important;
+            font-weight: 500;
+        }
+
+        .budget-option {
+            background-color: #cce5ff !important;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 15px 0;
+        }
+
+        .pros, .cons {
+            padding: 15px;
+            border: 1px solid #e8e8e8;
+        }
+
+        .pros {
+            background: #f8fdf8;
+            border-left: 3px solid #28a745;
+        }
+
+        .cons {
+            background: #fdf8f8;
+            border-left: 3px solid #dc3545;
+        }
+
+        .pros h4, .cons h4 {
+            margin: 0 0 10px 0;
+            font-size: 1rem;
+        }
+
+        .pros h4 { color: #155724; }
+        .cons h4 { color: #721c24; }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        .setup-phases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .phase-card {
+            border: 1px solid #e8e8e8;
+            padding: 20px;
+            background: #fafafa;
+            border-left: 4px solid #007bff;
+        }
+
+        .phase-card h4 {
+            color: #007bff;
+            margin: 0 0 15px 0;
+        }
+
+        .phase-card ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .phase-card li {
+            margin: 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .cost-breakdown {
+            background: #f8f9fa;
+            border: 1px solid #e8e8e8;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .cost-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .cost-item:last-child {
+            border-bottom: none;
+            font-weight: bold;
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 2px solid #007bff;
+        }
+
+        .cost-label {
+            font-weight: 500;
+        }
+
+        .cost-amount {
+            font-weight: 600;
+            color: #007bff;
+        }
+
+        .family-setup {
+            background: #f8f9fa;
+            border: 1px solid #e8e8e8;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .family-setup .tree-line {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .family-setup .root {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        .code-block .comment {
+            color: #68d391;
+        }
+
+        .final-recommendation {
+            background: #e8f5e8;
+            border: 2px solid #28a745;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .final-recommendation h3 {
+            color: #155724;
+            margin-top: 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            border: 1px solid #e8e8e8;
+            padding: 20px;
+            background: #fafafa;
+        }
+
+        .feature-card h4 {
+            color: #007bff;
+            margin: 0 0 15px 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+
+            .setup-phases {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.8rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="spotify-alternatives-report.html" class="back-link">← Back to Main Report</a>
+        <h1>Navidrome Complete Setup Guide</h1>
+        <p class="subtitle">Your comprehensive guide to self-hosted music streaming with complete privacy and control</p>
+    </div>
+
+    <div class="section">
+        <h2>What is Navidrome?</h2>
+        <div class="highlight-box">
+            <p>Navidrome is a lightweight, self-hosted music streaming server that transforms your personal music collection into your own private streaming service. Think of it as running your own Spotify, but with music you actually own, complete privacy, and no corporate tracking.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Hardware Requirements & Hosting Options</h2>
+
+        <div class="success-box">
+            <h4>VPS Hosting (Recommended for Good Uptime)</h4>
+            <p><strong>Yes, you can absolutely use Navidrome on a VPS!</strong> This is actually recommended for reliable uptime and remote access.</p>
+        </div>
+
+        <h3>VPS Specifications</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Specification</th>
+                    <th>Minimum</th>
+                    <th>Recommended</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>RAM</strong></td>
+                    <td>1GB</td>
+                    <td>2-4GB</td>
+                    <td>Navidrome uses ~130MB while idle</td>
+                </tr>
+                <tr>
+                    <td><strong>CPU</strong></td>
+                    <td>1 vCPU</td>
+                    <td>1-2 vCPU</td>
+                    <td>Sufficient for personal use</td>
+                </tr>
+                <tr>
+                    <td><strong>Storage</strong></td>
+                    <td>20GB+</td>
+                    <td>50GB+</td>
+                    <td>10GB system + your music library</td>
+                </tr>
+                <tr>
+                    <td><strong>Bandwidth</strong></td>
+                    <td>1TB/month</td>
+                    <td>2TB+/month</td>
+                    <td>Adequate for personal streaming</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>VPS Cost Comparison (2024)</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Provider</th>
+                    <th>RAM</th>
+                    <th>CPU</th>
+                    <th>Storage</th>
+                    <th>Bandwidth</th>
+                    <th>USD/Month</th>
+                    <th>AUD/Month</th>
+                    <th>Ethics Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="recommended">
+                    <td><strong>Linode</strong></td>
+                    <td>1GB</td>
+                    <td>1 vCPU</td>
+                    <td>25GB SSD</td>
+                    <td>1TB</td>
+                    <td>$5</td>
+                    <td><strong>$7.50</strong></td>
+                    <td>7/10</td>
+                </tr>
+                <tr>
+                    <td>DigitalOcean</td>
+                    <td>1GB</td>
+                    <td>1 vCPU</td>
+                    <td>25GB SSD</td>
+                    <td>1TB</td>
+                    <td>$6</td>
+                    <td>$9</td>
+                    <td>5/10</td>
+                </tr>
+                <tr>
+                    <td>Vultr</td>
+                    <td>1GB</td>
+                    <td>1 vCPU</td>
+                    <td>25GB SSD</td>
+                    <td>1TB</td>
+                    <td>$6</td>
+                    <td>$9</td>
+                    <td>6/10</td>
+                </tr>
+                <tr class="recommended">
+                    <td><strong>OVHcloud Australia</strong> ⭐</td>
+                    <td>1GB</td>
+                    <td>1 vCPU</td>
+                    <td>25GB SSD</td>
+                    <td>1TB</td>
+                    <td>$8-10</td>
+                    <td><strong>$12-15</strong></td>
+                    <td>8/10</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="success-box">
+            <h4>Updated Recommendation for Melbourne Users</h4>
+            <p><strong>OVHcloud Australia</strong> offers the best ethics + data sovereignty at $12-15 AUD/month, while <strong>Linode</strong> provides the most cost-effective option at $7.50 AUD/month with acceptable ethics.</p>
+        </div>
+
+        <h3>Local Hardware Options</h3>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>Budget: Raspberry Pi</h4>
+                <p><strong>Cost:</strong> $50-100</p>
+                <ul>
+                    <li><strong>Pros:</strong> Very low power, silent operation</li>
+                    <li><strong>Cons:</strong> Limited by home internet uptime</li>
+                    <li><strong>Good for:</strong> Testing, personal use only</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h4>Mid-Range: Intel NUC</h4>
+                <p><strong>Cost:</strong> $200-500</p>
+                <ul>
+                    <li><strong>Pros:</strong> More powerful, multiple services</li>
+                    <li><strong>Cons:</strong> Higher power, home internet dependent</li>
+                    <li><strong>Good for:</strong> Home lab enthusiasts</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h4>High-End: Dedicated Server</h4>
+                <p><strong>Cost:</strong> $500+</p>
+                <ul>
+                    <li><strong>Pros:</strong> Maximum control and performance</li>
+                    <li><strong>Cons:</strong> Highest cost, requires expertise</li>
+                    <li><strong>Good for:</strong> Tech enthusiasts</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Ethical Analysis & Melbourne Latency Considerations</h2>
+
+        <h3>Corporate Ethics Comparison (2024)</h3>
+
+        <div class="service-card">
+            <div class="service-header">
+                <h3 class="service-title">Linode/Akamai - Mixed Record (Ethics Score: 7/10)</h3>
+            </div>
+            <div class="service-content">
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Positive Aspects</h4>
+                        <ul>
+                            <li>No major controversies found</li>
+                            <li>Stable service record</li>
+                            <li>Properly charges Australian sales tax (compliance)</li>
+                            <li>No significant labor issues found</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Concerns</h4>
+                        <ul>
+                            <li>Acquired by Akamai (large US tech company) in 2022</li>
+                            <li>Subject to US government data requests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card avoid">
+            <div class="service-header">
+                <h3 class="service-title">DigitalOcean - Concerning Practices (Ethics Score: 5/10)</h3>
+            </div>
+            <div class="service-content">
+                <div class="warning-box">
+                    <h4>Major Labor Issues</h4>
+                    <ul>
+                        <li><strong>Mass Layoffs:</strong> Laid off 200 employees (11% of workforce) in 2023</li>
+                        <li><strong>Broken Promises:</strong> "Promises were made, but in the end not honored"</li>
+                        <li><strong>Wage Arbitrage:</strong> Moving hiring to lower-wage countries (Pakistan, Mexico)</li>
+                        <li><strong>Employee Sentiment:</strong> "Pure greed play, nothing more" - multiple negative reviews</li>
+                        <li><strong>Leadership Instability:</strong> Ongoing executive departures</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-header">
+                <h3 class="service-title">Vultr - Recent Controversy (Ethics Score: 6/10)</h3>
+            </div>
+            <div class="service-content">
+                <div class="warning-box">
+                    <h4>2024 Content Rights Issue</h4>
+                    <ul>
+                        <li><strong>Problem:</strong> Controversial terms claiming "perpetual, irrevocable" rights to user content</li>
+                        <li><strong>Response:</strong> Quickly removed after public outcry</li>
+                        <li><strong>Assessment:</strong> Concerning initial overreach but responsive to feedback</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card recommended">
+            <div class="service-header">
+                <h3 class="service-title">OVHcloud Australia - Best Ethics (Ethics Score: 8/10)</h3>
+            </div>
+            <div class="service-content">
+                <div class="success-box">
+                    <h4>Strong Ethical Profile</h4>
+                    <ul>
+                        <li><strong>European Company:</strong> Better privacy regulations than US companies</li>
+                        <li><strong>Data Sovereignty:</strong> Sydney datacenter under Australian law</li>
+                        <li><strong>No Major Controversies:</strong> Clean corporate record</li>
+                        <li><strong>GDPR Compliance:</strong> Strong privacy protections</li>
+                        <li><strong>Local Benefits:</strong> Excellent latency for Melbourne users</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h3>Latency from Melbourne Australia</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Provider</th>
+                    <th>Server Locations (APAC)</th>
+                    <th>Average Response Time</th>
+                    <th>Latency Impact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="recommended">
+                    <td><strong>OVHcloud Australia</strong></td>
+                    <td>Sydney (local)</td>
+                    <td>~10-20ms</td>
+                    <td>Excellent</td>
+                </tr>
+                <tr>
+                    <td>Vultr</td>
+                    <td>Sydney, Singapore, Tokyo</td>
+                    <td>359-382ms</td>
+                    <td>Good</td>
+                </tr>
+                <tr>
+                    <td>DigitalOcean</td>
+                    <td>Singapore</td>
+                    <td>365-405ms</td>
+                    <td>Good</td>
+                </tr>
+                <tr>
+                    <td>Linode</td>
+                    <td>Limited APAC presence</td>
+                    <td>368-400ms</td>
+                    <td>Good</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight-box">
+            <h4>Latency Verdict for Music Streaming</h4>
+            <p>Only 10-20ms difference between providers - <strong>negligible for music streaming</strong>. Even US West Coast servers provide adequate performance for Navidrome use.</p>
+        </div>
+
+        <h3>Australian Data Sovereignty Benefits</h3>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>Why Consider Australian Hosting?</h4>
+                <ul>
+                    <li><strong>2024 Privacy Act Updates:</strong> New government requirements for data sovereignty</li>
+                    <li><strong>US CLOUD Act Concerns:</strong> American companies can be forced to hand over data</li>
+                    <li><strong>Local Compliance:</strong> Easier adherence to Australian privacy laws</li>
+                    <li><strong>Political Alignment:</strong> Reduces dependence on US tech giants</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h4>Other Australian Options</h4>
+                <ul>
+                    <li><strong>Swift Digital:</strong> ISO 27001 accredited, Australian-owned</li>
+                    <li><strong>Servers Australia:</strong> Local data sovereignty focus</li>
+                    <li><strong>Macquarie Data Centres:</strong> Government-certified strategic provider</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Multi-User Sharing & Family Accounts</h2>
+
+        <div class="success-box">
+            <h4>Multi-User Capabilities</h4>
+            <p><strong>Yes, Navidrome supports multiple users!</strong> Each user gets their own playlists, favorites, play counts, and personalized experience.</p>
+        </div>
+
+        <h3>Multi-Library Support for Families</h3>
+
+        <div class="family-setup">
+            <div class="tree-line root">Family Navidrome Server</div>
+            <div class="tree-line">├── Dad's Rock Collection (Dad access only)</div>
+            <div class="tree-line">├── Mom's Jazz Library (Mom access only)</div>
+            <div class="tree-line">├── Kids' Music (Kids access only)</div>
+            <div class="tree-line">└── Shared Family Library (Everyone access)</div>
+        </div>
+
+        <h3>User Roles & Permissions</h3>
+
+        <div class="pros-cons">
+            <div class="pros">
+                <h4>Admin Users</h4>
+                <ul>
+                    <li>Access to all libraries automatically</li>
+                    <li>Can create and manage other users</li>
+                    <li>Can assign library permissions</li>
+                    <li>Full system configuration access</li>
+                </ul>
+            </div>
+            <div class="cons">
+                <h4>Regular Users</h4>
+                <ul>
+                    <li>Must be explicitly granted library access</li>
+                    <li>Can only see their assigned libraries</li>
+                    <li>Cannot create other users</li>
+                    <li>Limited configuration access</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <h4>Current Limitation</h4>
+            <p><strong>Sharing Feature:</strong> If enabled, all users have equal sharing capabilities. There's currently no granular sharing permissions per user.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Cost Analysis: VPS vs Local Hardware</h2>
+
+        <h3>5-Year Total Cost Comparison</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Option</th>
+                    <th>Initial Cost</th>
+                    <th>Annual Cost</th>
+                    <th>5-Year Total</th>
+                    <th>Uptime</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="recommended">
+                    <td><strong>Linode VPS</strong></td>
+                    <td>$0</td>
+                    <td>$60</td>
+                    <td><strong>$300</strong></td>
+                    <td>99.9%</td>
+                </tr>
+                <tr>
+                    <td>Raspberry Pi</td>
+                    <td>$80</td>
+                    <td>$15</td>
+                    <td>$155</td>
+                    <td>95% (home internet)</td>
+                </tr>
+                <tr>
+                    <td>Intel NUC</td>
+                    <td>$350</td>
+                    <td>$40</td>
+                    <td>$550</td>
+                    <td>95% (home internet)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight-box">
+            <h4>Winner: VPS for Reliability</h4>
+            <p>For your use case (heavy CarPlay usage, need for good uptime), <strong>VPS is recommended</strong> because:</p>
+            <ul>
+                <li>Home internet outages won't affect your music</li>
+                <li>No need to configure home router/firewall</li>
+                <li>Better performance and reliability</li>
+                <li>Professional-grade infrastructure</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Storage Considerations</h2>
+
+        <h3>Music Library Size Planning</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Collection Size</th>
+                    <th>Storage Needed</th>
+                    <th>Recommended VPS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Small (1,000 songs)</td>
+                    <td>5-10GB</td>
+                    <td>25GB VPS</td>
+                </tr>
+                <tr>
+                    <td>Medium (5,000 songs)</td>
+                    <td>25-50GB</td>
+                    <td>80GB VPS</td>
+                </tr>
+                <tr>
+                    <td>Large (20,000 songs)</td>
+                    <td>100-200GB</td>
+                    <td>320GB VPS</td>
+                </tr>
+                <tr>
+                    <td>Audiophile (FLAC)</td>
+                    <td>2-5x above sizes</td>
+                    <td>Custom storage</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Music Format Recommendations</h3>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>For VPS Storage Efficiency</h4>
+                <ul>
+                    <li><strong>MP3 320kbps:</strong> Good quality, reasonable file sizes</li>
+                    <li><strong>MP3 V0:</strong> Variable bitrate, excellent quality/size ratio</li>
+                    <li><strong>FLAC:</strong> Best quality but large files (use for favorites only)</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h4>For Vinyl Rips</h4>
+                <ul>
+                    <li><strong>FLAC:</strong> Preserve the full quality of your vinyl</li>
+                    <li><strong>Separate library:</strong> Keep vinyl rips in dedicated library</li>
+                    <li><strong>Metadata:</strong> Tag with pressing details, catalog numbers</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Setup Process Overview</h2>
+
+        <div class="setup-phases">
+            <div class="phase-card">
+                <h4>Phase 1: VPS Setup</h4>
+                <ol>
+                    <li>Choose Provider (Linode recommended)</li>
+                    <li>Deploy Server (Ubuntu 22.04 LTS)</li>
+                    <li>Secure Server (SSH keys, firewall)</li>
+                    <li>Install Dependencies (Docker, FFmpeg)</li>
+                </ol>
+            </div>
+
+            <div class="phase-card">
+                <h4>Phase 2: Navidrome Installation</h4>
+                <ol>
+                    <li>Docker Compose Setup</li>
+                    <li>Configuration (music folder, database)</li>
+                    <li>First Run (create admin account)</li>
+                    <li>SSL Setup (Let's Encrypt for HTTPS)</li>
+                </ol>
+            </div>
+
+            <div class="phase-card">
+                <h4>Phase 3: Music Library Setup</h4>
+                <ol>
+                    <li>Upload Music (transfer collection to VPS)</li>
+                    <li>Organize Libraries (separate for family)</li>
+                    <li>User Management (create family accounts)</li>
+                    <li>Permissions (assign library access)</li>
+                </ol>
+            </div>
+
+            <div class="phase-card">
+                <h4>Phase 4: Client Setup</h4>
+                <ol>
+                    <li>iOS Apps (install play:Sub or Amperfy)</li>
+                    <li>CarPlay Configuration</li>
+                    <li>Home Integration (WiiM Pro Plus)</li>
+                    <li>Backup Strategy</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Integration with Your Current Setup</h2>
+
+        <h3>CarPlay Integration</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>iOS App</th>
+                    <th>Cost</th>
+                    <th>CarPlay Support</th>
+                    <th>Reliability vs Qobuz</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="recommended">
+                    <td><strong>play:Sub</strong></td>
+                    <td>$10 (one-time)</td>
+                    <td>Excellent integration</td>
+                    <td>Much more reliable</td>
+                </tr>
+                <tr>
+                    <td>Amperfy</td>
+                    <td>Free (open source)</td>
+                    <td>Good but limited navigation</td>
+                    <td>More reliable than Qobuz</td>
+                </tr>
+                <tr>
+                    <td>iSub</td>
+                    <td>Free</td>
+                    <td>Basic support</td>
+                    <td>Backup option only</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Device Integration</h3>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Device</th>
+                    <th>Compatibility</th>
+                    <th>Quality</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>WiiM Pro Plus</strong></td>
+                    <td>✓ Excellent</td>
+                    <td>✓ Full hi-res audio</td>
+                    <td>Via Subsonic API</td>
+                </tr>
+                <tr>
+                    <td><strong>Sonos</strong></td>
+                    <td>⚠ Limited</td>
+                    <td>⚠ AirPlay quality</td>
+                    <td>Use AirPlay workaround</td>
+                </tr>
+                <tr>
+                    <td><strong>CarPlay</strong></td>
+                    <td>✓ Excellent</td>
+                    <td>✓ Full quality</td>
+                    <td>Via play:Sub app</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Security & Privacy Considerations</h2>
+
+        <h3>VPS Security</h3>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>Essential Security Measures</h4>
+                <ul>
+                    <li><strong>SSH Key Authentication:</strong> Disable password login</li>
+                    <li><strong>Firewall:</strong> Only open necessary ports</li>
+                    <li><strong>Fail2Ban:</strong> Prevent brute force attacks</li>
+                    <li><strong>Regular Updates:</strong> Keep system updated</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h4>Privacy Benefits</h4>
+                <ul>
+                    <li><strong>No Tracking:</strong> Your listening habits stay private</li>
+                    <li><strong>No Ads:</strong> Commercial-free music experience</li>
+                    <li><strong>Data Control:</strong> Your music, your server, your rules</li>
+                    <li><strong>No Censorship:</strong> Music can't be removed</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Recommended Setup for Your Needs</h2>
+
+        <div class="final-recommendation">
+            <h3>Optimal Configuration</h3>
+
+            <div class="cost-breakdown">
+                <h4>Total First Year Cost (AUD)</h4>
+                <div class="cost-item">
+                    <span class="cost-label">VPS Hosting - Linode (Budget Option)</span>
+                    <span class="cost-amount">$90 AUD</span>
+                </div>
+                <div class="cost-item">
+                    <span class="cost-label">VPS Hosting - OVHcloud AU (Ethical Option)</span>
+                    <span class="cost-amount">$144-180 AUD</span>
+                </div>
+                <div class="cost-item">
+                    <span class="cost-label">play:Sub App (one-time)</span>
+                    <span class="cost-amount">$15 AUD</span>
+                </div>
+                <div class="cost-item">
+                    <span class="cost-label">Domain (optional)</span>
+                    <span class="cost-amount">$22 AUD</span>
+                </div>
+                <div class="cost-item">
+                    <span class="cost-label">Music Purchases</span>
+                    <span class="cost-amount">Variable</span>
+                </div>
+                <div class="cost-item">
+                    <span class="cost-label">Budget Total: Linode + app</span>
+                    <span class="cost-amount">$105 AUD + music</span>
+                </div>
+                <div class="cost-item">
+                    <span class="cost-label">Ethical Total: OVHcloud + app</span>
+                    <span class="cost-amount">$159-195 AUD + music</span>
+                </div>
+            </div>
+
+            <h4>Comparison to Streaming Services (AUD/year)</h4>
+            <ul>
+                <li><strong>Spotify Premium:</strong> $192 AUD/year (no ownership)</li>
+                <li><strong>Qobuz Studio:</strong> $300-360 AUD/year (no ownership)</li>
+                <li><strong>Navidrome (Budget):</strong> $105 AUD/year + owned music</li>
+                <li><strong>Navidrome (Ethical):</strong> $159-195 AUD/year + owned music</li>
+            </ul>
+
+            <h4>Migration Strategy</h4>
+            <ol>
+                <li><strong>Start Small:</strong> Set up VPS with core collection</li>
+                <li><strong>Test CarPlay:</strong> Ensure play:Sub works reliably in car</li>
+                <li><strong>Expand Gradually:</strong> Add more music as you go</li>
+                <li><strong>Family Integration:</strong> Add other users once system is stable</li>
+            </ol>
+
+            <h4>Why This Setup is Perfect for You</h4>
+            <ul>
+                <li><strong>Professional-grade music streaming</strong> with complete privacy</li>
+                <li><strong>Excellent CarPlay integration</strong> (more reliable than Qobuz)</li>
+                <li><strong>Alignment with leftist values</strong> by reducing corporate dependence</li>
+                <li><strong>Perfect for record collectors</strong> to integrate vinyl rips</li>
+                <li><strong>Family-friendly</strong> with multi-user support</li>
+                <li><strong>Cost-effective</strong> compared to streaming subscriptions</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="highlight-box">
+            <h4>Ready to Get Started?</h4>
+            <p>This setup gives you professional-grade music streaming with complete privacy, excellent CarPlay integration, and perfect alignment with your ethical values. The combination of Navidrome for owned music and strategic Qobuz use for discovery creates the ultimate ethical music solution.</p>
+            <p><a href="spotify-alternatives-report.html" class="back-link">← Return to Main Report</a></p>
+        </div>
+    </div>
+</body>
+</html>

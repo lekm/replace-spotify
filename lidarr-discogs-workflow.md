@@ -9,7 +9,7 @@
 
 **Current Status**:
 - ✅ **Legal in Australia** under format shifting provisions
-- ⚠️ **Discogs Integration**: Pull Request #5577 is **OPEN** (last updated Aug 2024)
+- ⚠️ **Discogs Integration**: Pull Request #5577 is **OPEN** ([last updated August 28, 2025](https://github.com/Lidarr/Lidarr/pull/5577))
 - ✅ **All other components**: Ready and available
 
 **Timeline**:

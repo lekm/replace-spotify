@@ -90,11 +90,13 @@
 ### Cost Analysis (AUD, 2024 Pricing)
 
 #### Streaming Services (Annual Costs)
-- **Spotify Premium**: $15.99/month = $192/year
-- **Qobuz Studio**: $25-30/month = $300-360/year
-- **Apple Music**: $12/month = $144/year
-- **Tidal HiFi Plus**: $20-25/month = $240-300/year
-- **YouTube Music**: $12/month = $144/year
+- **Spotify Premium**: $15.99/month = $191.88/year [(Source)](https://www.spotify.com/au/premium/)
+- **Qobuz Studio**: $19.99/month = $239.88/year OR $199.90/year (annual plan) [(Source)](https://www.qobuz.com/au-en/music/streaming/offers/studio)
+- **Apple Music**: $12.99/month = $155.88/year [(Source)](https://www.apple.com/au/apple-music/)
+- **Tidal HiFi Plus**: ~$20-25/month = $240-300/year *(needs verification)*
+- **YouTube Music**: ~$12/month = $144/year *(needs verification)*
+
+*Prices verified October 2025*
 
 #### Self-Hosted Options (Annual Costs)
 - **OVHcloud VPS-1**: $6.12 AUD/month (ex GST) = ~$81/year (inc GST ~$89/year)
@@ -122,7 +124,7 @@
 - **Maximum Ethics**: Highest artist compensation + direct purchases
 - **Superior CarPlay**: play:Sub more reliable than Qobuz native app
 - **Future-Proof**: Own music regardless of service changes
-- **Cost-Effective**: $104-154 AUD/year vs $300-360 for Qobuz alone
+- **Cost-Effective**: $104-154 AUD/year vs $200-240 for Qobuz alone
 
 ### VPS Hosting Analysis (Melbourne, Australia)
 

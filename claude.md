@@ -289,12 +289,14 @@ Navidrome is a lightweight, self-hosted music streaming server that gives you co
 ---
 
 ## Cost Analysis (AUD Monthly)
-- **Spotify Premium**: ~$12 (NOT RECOMMENDED - ethical issues)
-- **Qobuz Studio**: ~$25-30 (RECOMMENDED - highest ethics score)
-- **Apple Music**: ~$12 (BACKUP OPTION - mixed ethics)
+- **Spotify Premium**: $15.99 (NOT RECOMMENDED - ethical issues) [(Source)](https://www.spotify.com/au/premium/)
+- **Qobuz Studio**: $19.99/month or $16.66/month (annual plan $199.90/year) [(Source)](https://www.qobuz.com/au-en/music/streaming/offers/studio)
+- **Apple Music**: $12.99 (BACKUP OPTION - mixed ethics) [(Source)](https://www.apple.com/au/apple-music/)
 - ~~**Tidal HiFi Plus**: ~$20-25~~ (AVOID - labor issues)
 - ~~**YouTube Music Premium**: ~$12~~ (AVOID - LGBTQ+ discrimination)
 - **Hybrid approach**: Qobuz + music purchases + Navidrome server
+
+*Prices verified October 2025*
 
 ## Final Recommendation (Updated for Leftist Values)
 **Primary**: **Qobuz** - Best alignment with socialist, pro-artist, anti-war values

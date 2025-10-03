@@ -88,12 +88,15 @@ Physical Media → Discogs → Lidarr → Navidrome → play:Sub → CarPlay
 
 | Solution | Annual Cost (AUD) | Ethics Score |
 |----------|-------------------|--------------|
-| Spotify Premium | $192 | 2/10 ❌ |
-| Qobuz Studio | $300-360 | 9/10 ✅ |
+| Spotify Premium | $191.88 | 2/10 ❌ |
+| Qobuz Studio (monthly) | $239.88 | 9/10 ✅ |
+| Qobuz Studio (annual) | $199.90 | 9/10 ✅ |
 | Navidrome + VPS | $96-141 | 10/10 ✅ |
-| Hybrid (Navidrome + Qobuz) | $396-501 | 10/10 ✅ |
+| Hybrid (Navidrome + Qobuz annual) | $296-341 | 10/10 ✅ |
 
-**Savings**: Navidrome-only saves $204-264/year vs Qobuz, $96/year vs Spotify
+**Savings**: Navidrome-only saves $59-104/year vs Qobuz (monthly) or $104/year vs Qobuz (annual plan), $96/year vs Spotify
+
+*Prices verified October 2025 - [Sources](sources.md)*
 
 ## 🎵 Device Compatibility
 

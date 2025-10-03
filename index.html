@@ -12,10 +12,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
+            color: #2c2c2c;
+            background-color: #fdfdfd;
         }
 
         /* Sticky Header */
@@ -26,7 +26,6 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         header h1 {
@@ -43,7 +42,7 @@
         }
 
         nav a {
-            color: #007bff;
+            color: #732982;
             text-decoration: none;
             font-weight: 400;
             transition: color 0.3s;
@@ -51,122 +50,219 @@
         }
 
         nav a:hover {
-            color: #0056b3;
+            color: #24408E;
             text-decoration: underline;
         }
 
         /* Main Content */
         main {
             max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .hero {
-            background: white;
-            padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
+            background: #fdfdfd;
+            border: 1px solid #e8e8e8;
+            padding: 30px;
+            margin-bottom: 30px;
         }
 
         .hero h2 {
             color: #1a1a1a;
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
             font-size: 2rem;
+            font-weight: 300;
         }
 
         .hero p {
             color: #666;
             font-size: 1.1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
         }
 
         .ethics-score {
             display: inline-block;
             padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            font-weight: bold;
+            font-weight: 500;
             font-size: 0.9rem;
         }
 
-        .score-high { background: #4CAF50; color: white; }
-        .score-medium { background: #FF9800; color: white; }
-        .score-low { background: #f44336; color: white; }
+        .score-high {
+            background: #008026;
+            color: white;
+        }
+
+        .score-medium {
+            background: #FF8C00;
+            color: white;
+        }
+
+        .score-low {
+            background: #E40303;
+            color: white;
+        }
 
         .reports {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .report-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: #fdfdfd;
+            border: 1px solid #e8e8e8;
+            padding: 25px;
+            transition: border-color 0.3s;
         }
 
         .report-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-color: #732982;
         }
 
         .report-card h3 {
             color: #1a1a1a;
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
             font-size: 1.3rem;
+            font-weight: 400;
         }
 
         .report-card p {
             color: #666;
-            margin-bottom: 1.5rem;
+            margin-bottom: 20px;
         }
 
         .report-card a {
             display: inline-block;
-            background: #4CAF50;
+            background: #008026;
             color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
+            padding: 10px 20px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 400;
             transition: background 0.3s;
+            border: 1px solid #008026;
         }
 
         .report-card a:hover {
-            background: #45a049;
+            background: #732982;
+            border-color: #732982;
         }
 
         .key-findings {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 4px;
+            background: #fef9e7;
+            border-left: 1px solid #FFED00;
+            padding: 20px;
+            margin: 20px 0;
         }
 
         .key-findings h3 {
             color: #856404;
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
+            font-weight: 400;
         }
 
         .key-findings ul {
-            margin-left: 1.5rem;
+            margin-left: 20px;
             color: #856404;
         }
 
         .key-findings li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 8px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            font-size: 1.8rem;
+            font-weight: 400;
+            border-bottom: 1px solid #e8e8e8;
+            padding-bottom: 10px;
+        }
+
+        .table-container {
+            background: #fdfdfd;
+            border: 1px solid #e8e8e8;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .table-container h3 {
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table thead tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            text-align: left;
+            padding: 12px;
+            font-weight: 500;
+        }
+
+        table tbody tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        table td {
+            padding: 12px;
+        }
+
+        .cost-list {
+            background: #fdfdfd;
+            border: 1px solid #e8e8e8;
+            padding: 25px;
+        }
+
+        .cost-list h2 {
+            border: none;
+            padding-bottom: 0;
+            margin-bottom: 20px;
+        }
+
+        .cost-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cost-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cost-list li:last-child {
+            border-bottom: none;
+        }
+
+        .cost-note {
+            margin-top: 15px;
+            color: #666;
+            font-style: italic;
+            font-size: 0.95rem;
         }
 
         footer {
             text-align: center;
-            padding: 2rem;
+            padding: 30px 20px;
             color: #666;
-            margin-top: 3rem;
+            margin-top: 50px;
+            border-top: 1px solid #e8e8e8;
+        }
+
+        footer p {
+            margin-bottom: 8px;
         }
 
         @media (max-width: 768px) {
@@ -175,7 +271,7 @@
             }
 
             header h1 {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
 
             nav {
@@ -183,7 +279,7 @@
             }
 
             .hero {
-                padding: 2rem 1.5rem;
+                padding: 20px;
             }
 
             .hero h2 {
@@ -191,7 +287,21 @@
             }
 
             main {
-                padding: 0 1rem;
+                padding: 15px;
+            }
+
+            .table-container,
+            .cost-list {
+                padding: 15px;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            table th,
+            table td {
+                padding: 8px;
             }
         }
     </style>
@@ -224,55 +334,55 @@
         </div>
 
         <section>
-            <h2 style="margin-bottom: 1.5rem; color: #1a1a1a;">📊 Top Recommendations</h2>
+            <h2>📊 Top Recommendations</h2>
 
-            <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 2rem;">
-                <h3 style="color: #1a1a1a; margin-bottom: 1rem;">Ethics Scores (2024)</h3>
-                <table style="width: 100%; border-collapse: collapse;">
+            <div class="table-container">
+                <h3>Ethics Scores (2024)</h3>
+                <table>
                     <thead>
-                        <tr style="border-bottom: 2px solid #ddd;">
-                            <th style="text-align: left; padding: 0.75rem;">Service</th>
-                            <th style="text-align: left; padding: 0.75rem;">Ethics Score</th>
-                            <th style="text-align: left; padding: 0.75rem;">Artist Pay/Stream</th>
-                            <th style="text-align: left; padding: 0.75rem;">Verdict</th>
+                        <tr>
+                            <th>Service</th>
+                            <th>Ethics Score</th>
+                            <th>Artist Pay/Stream</th>
+                            <th>Verdict</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 0.75rem;"><strong>Navidrome (Self-hosted)</strong></td>
-                            <td style="padding: 0.75rem;"><span class="ethics-score score-high">10/10</span></td>
-                            <td style="padding: 0.75rem;">Direct purchases</td>
-                            <td style="padding: 0.75rem;">✅ Best</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 0.75rem;"><strong>Qobuz</strong></td>
-                            <td style="padding: 0.75rem;"><span class="ethics-score score-high">9/10</span></td>
-                            <td style="padding: 0.75rem;">$0.022</td>
-                            <td style="padding: 0.75rem;">✅ Recommended</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 0.75rem;"><strong>Apple Music</strong></td>
-                            <td style="padding: 0.75rem;"><span class="ethics-score score-medium">6/10</span></td>
-                            <td style="padding: 0.75rem;">$0.0056-$0.0078</td>
-                            <td style="padding: 0.75rem;">⚠️ Mixed</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 0.75rem;"><strong>Tidal</strong></td>
-                            <td style="padding: 0.75rem;"><span class="ethics-score score-medium">4/10</span></td>
-                            <td style="padding: 0.75rem;">$0.013</td>
-                            <td style="padding: 0.75rem;">⚠️ Avoid</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 0.75rem;"><strong>YouTube Music</strong></td>
-                            <td style="padding: 0.75rem;"><span class="ethics-score score-low">3/10</span></td>
-                            <td style="padding: 0.75rem;">$0.0027</td>
-                            <td style="padding: 0.75rem;">❌ Avoid</td>
+                        <tr>
+                            <td><strong>Navidrome (Self-hosted)</strong></td>
+                            <td><span class="ethics-score score-high">10/10</span></td>
+                            <td>Direct purchases</td>
+                            <td>✅ Best</td>
                         </tr>
                         <tr>
-                            <td style="padding: 0.75rem;"><strong>Spotify</strong></td>
-                            <td style="padding: 0.75rem;"><span class="ethics-score score-low">2/10</span></td>
-                            <td style="padding: 0.75rem;">$0.003-$0.004</td>
-                            <td style="padding: 0.75rem;">❌ Avoid</td>
+                            <td><strong>Qobuz</strong></td>
+                            <td><span class="ethics-score score-high">9/10</span></td>
+                            <td>$0.022</td>
+                            <td>✅ Recommended</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Apple Music</strong></td>
+                            <td><span class="ethics-score score-medium">6/10</span></td>
+                            <td>$0.0056-$0.0078</td>
+                            <td>⚠️ Mixed</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tidal</strong></td>
+                            <td><span class="ethics-score score-medium">4/10</span></td>
+                            <td>$0.013</td>
+                            <td>⚠️ Avoid</td>
+                        </tr>
+                        <tr>
+                            <td><strong>YouTube Music</strong></td>
+                            <td><span class="ethics-score score-low">3/10</span></td>
+                            <td>$0.0027</td>
+                            <td>❌ Avoid</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Spotify</strong></td>
+                            <td><span class="ethics-score score-low">2/10</span></td>
+                            <td>$0.003-$0.004</td>
+                            <td>❌ Avoid</td>
                         </tr>
                     </tbody>
                 </table>
@@ -280,7 +390,7 @@
         </section>
 
         <section>
-            <h2 style="margin-bottom: 1.5rem; color: #1a1a1a;">📖 Documentation</h2>
+            <h2>📖 Documentation</h2>
             <div class="reports">
                 <div class="report-card">
                     <h3>Complete Analysis Report</h3>
@@ -302,35 +412,39 @@
             </div>
         </section>
 
-        <section style="margin-top: 3rem; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-            <h2 style="color: #1a1a1a; margin-bottom: 1rem;">💰 Cost Comparison (AUD/year)</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
-                    <strong>Spotify Premium:</strong> $192/year
+        <div class="cost-list">
+            <h2>💰 Cost Comparison (AUD/year)</h2>
+            <ul>
+                <li>
+                    <strong>Spotify Premium:</strong> $191.88/year
                     <span class="ethics-score score-low">2/10</span>
                 </li>
-                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
-                    <strong>Qobuz Studio:</strong> $300-360/year
+                <li>
+                    <strong>Qobuz Studio (monthly):</strong> $239.88/year
                     <span class="ethics-score score-high">9/10</span>
                 </li>
-                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                <li>
+                    <strong>Qobuz Studio (annual):</strong> $199.90/year
+                    <span class="ethics-score score-high">9/10</span>
+                </li>
+                <li>
                     <strong>Navidrome + VPS:</strong> $96-141/year
                     <span class="ethics-score score-high">10/10</span>
                 </li>
-                <li style="padding: 0.5rem 0;">
-                    <strong>Hybrid (Navidrome + Qobuz):</strong> $396-501/year
+                <li>
+                    <strong>Hybrid (Navidrome + Qobuz annual):</strong> $296-341/year
                     <span class="ethics-score score-high">10/10</span>
                 </li>
             </ul>
-            <p style="margin-top: 1rem; color: #666; font-style: italic;">
-                Savings: Navidrome-only saves $204-264/year vs Qobuz, $96/year vs Spotify, with maximum ethical alignment and artist support.
+            <p class="cost-note">
+                Savings: Navidrome-only saves $59-104/year vs Qobuz annual, $96/year vs Spotify, with maximum ethical alignment and artist support.
             </p>
-        </section>
+        </div>
     </main>
 
     <footer>
         <p>Built with leftist values: Support artists, resist corporate exploitation, own your culture.</p>
-        <p style="margin-top: 0.5rem; color: #999;">Last Updated: October 2025</p>
+        <p style="color: #999;">Last Updated: October 2025</p>
     </footer>
 </body>
 </html>

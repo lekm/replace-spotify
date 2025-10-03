@@ -588,5 +588,5 @@ The infrastructure you build now will serve you for **years** and align perfectl
 
 ---
 
-*Last Updated: October 2024*
+*Last Updated: October 2025*
 *Lidarr PR #5577 Status: Open (check https://github.com/Lidarr/Lidarr/pull/5577)*

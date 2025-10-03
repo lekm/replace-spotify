@@ -152,7 +152,7 @@ Documentation released under [CC BY-SA 4.0](https://creativecommons.org/licenses
 
 ---
 
-**Last Updated**: October 2024
+**Last Updated**: October 2025
 **Status**: Active research, Navidrome setup in progress
 **Contact**: Open an issue for questions or suggestions
 

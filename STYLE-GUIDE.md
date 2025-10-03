@@ -2,24 +2,24 @@
 
 **Purpose**: Visual design guidelines for ethical music streaming research documentation.
 
-**Philosophy**: Clean, minimal, professional design that reflects leftist values through pride flag colors and accessible typography.
+**Philosophy**: Clean, minimal, professional design that reflects leftist values through trans pride flag colors and accessible typography.
 
 ---
 
 ## Color Palette
 
-### Pride Flag Colors (Primary)
+### Trans Pride Flag Colors (Primary)
 
-Our color scheme is derived from the pride flag to align with LGBTQI+ inclusive values:
+Our color scheme is derived from the transgender pride flag to center trans community solidarity and LGBTQI+ inclusive values:
+
+**Source**: [Sexual Diversity Education - Trans Pride Flag](https://www.sexualdiversity.org/edu/flags/1086.php)
 
 | Color | Hex Code | Usage |
 |-------|----------|-------|
-| **Purple** | `#732982` | Primary links, accents, interactive elements |
-| **Indigo** | `#24408E` | Hover states, secondary accents |
-| **Green** | `#008026` | Success states, high ethics scores (9-10/10) |
-| **Orange** | `#FF8C00` | Warning states, medium ethics scores (4-6/10) |
-| **Red** | `#E40303` | Error states, low ethics scores (1-3/10) |
-| **Yellow** | `#FFED00` | Highlights, key findings borders |
+| **Light Blue** | `#74D7EE` | Primary links, accents, interactive elements, high ethics scores (9-10/10) |
+| **Pink** | `#FFAFC8` | Hover states, secondary accents, medium ethics scores (4-6/10) |
+| **White** | `#FFFFFF` | Backgrounds, callout boxes, highlights |
+| **Slate** | `#5A6C7D` | Low ethics scores (1-3/10), muted states |
 
 ### Neutral Colors (Supporting)
 
@@ -38,12 +38,12 @@ Our color scheme is derived from the pride flag to align with LGBTQI+ inclusive 
 
 | Color | Hex Code | Usage |
 |-------|----------|-------|
-| **Success Tint** | `#d4edda` | Success message backgrounds |
-| **Success Border** | `#c3e6cb` | Success message borders |
-| **Warning Tint** | `#fff3cd` | Warning message backgrounds |
-| **Warning Border** | `#ffeaa7` | Warning message borders |
-| **Info Tint** | `#f8f9fa` | Highlight boxes, info panels |
-| **Yellow Tint** | `#fef9e7` | Key findings, important callouts |
+| **Blue Tint** | `#E5F7FC` | Success message backgrounds, info panels |
+| **Blue Border** | `#B8EBFA` | Success message borders |
+| **Pink Tint** | `#FFE9F0` | Warning/attention backgrounds, key findings |
+| **Pink Border** | `#FFD6E3` | Warning message borders |
+| **White** | `#FFFFFF` | Pure backgrounds, callout boxes |
+| **Near White** | `#fdfdfd` | Page backgrounds, subtle variation |
 
 ---
 
@@ -96,12 +96,12 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 ```css
 /* Correct */
 border: 1px solid #e8e8e8;
-border-left: 1px solid #732982;
+border-left: 1px solid #74D7EE;
 border-bottom: 1px solid #ddd;
 
 /* WRONG - Never use thick borders */
-border: 2px solid #732982;  ❌
-border-left: 4px solid #008026;  ❌
+border: 2px solid #74D7EE;  ❌
+border-left: 4px solid #74D7EE;  ❌
 ```
 
 ### Border Styles
@@ -109,11 +109,12 @@ border-left: 4px solid #008026;  ❌
 | Context | Border Style |
 |---------|--------------|
 | Cards/containers | `1px solid #e8e8e8` |
-| Left accents | `1px solid [pride-color]` |
+| Left accents (blue) | `1px solid #74D7EE` |
+| Left accents (pink) | `1px solid #FFAFC8` |
 | Table headers | `1px solid #ddd` |
 | Table rows | `1px solid #eee` |
 | Section dividers | `1px solid #e8e8e8` |
-| Focused/hover | `1px solid #732982` |
+| Focused/hover | `1px solid #74D7EE` |
 
 ### Border Radius
 
@@ -189,8 +190,8 @@ z-index: 1000;
 - Color: #1a1a1a
 
 **Navigation Links**:
-- Color: #732982
-- Hover: #24408E with underline
+- Color: #74D7EE
+- Hover: #FFAFC8 with underline
 - Font size: 0.95rem
 - Weight: 400
 - Gap: 1.5rem
@@ -205,9 +206,9 @@ font-size: 0.9rem;
 ```
 
 **Colors**:
-- High (9-10/10): `background: #008026; color: white;`
-- Medium (4-6/10): `background: #FF8C00; color: white;`
-- Low (1-3/10): `background: #E40303; color: white;`
+- High (9-10/10): `background: #74D7EE; color: white;`
+- Medium (4-6/10): `background: #FFAFC8; color: white;`
+- Low (1-3/10): `background: #5A6C7D; color: white;`
 
 ### Cards
 
@@ -223,7 +224,7 @@ Hover states (optional):
 ```css
 transition: border-color 0.3s;
 :hover {
-    border-color: #732982;
+    border-color: #74D7EE;
 }
 ```
 
@@ -252,28 +253,28 @@ padding: 12px;
 
 **Primary Button**:
 ```css
-background: #008026;
+background: #74D7EE;
 color: white;
 padding: 10px 20px;
-border: 1px solid #008026;
+border: 1px solid #74D7EE;
 text-decoration: none;
 font-weight: 400;
 transition: background 0.3s;
 
 :hover {
-    background: #732982;
-    border-color: #732982;
+    background: #FFAFC8;
+    border-color: #FFAFC8;
 }
 ```
 
 **Text Links**:
 ```css
-color: #732982;
+color: #74D7EE;
 text-decoration: none;
 transition: color 0.3s;
 
 :hover {
-    color: #24408E;
+    color: #FFAFC8;
     text-decoration: underline;
 }
 ```
@@ -282,32 +283,33 @@ transition: color 0.3s;
 
 **Success/Recommendation**:
 ```css
-background: #d4edda;
-border: 1px solid #c3e6cb;
-border-left: 1px solid #008026;
+background: #E5F7FC;
+border: 1px solid #B8EBFA;
+border-left: 1px solid #74D7EE;
 padding: 20px;
 ```
 
-**Warning**:
+**Warning/Attention**:
 ```css
-background: #fff3cd;
-border: 1px solid #ffeaa7;
-border-left: 1px solid #FF8C00;
+background: #FFE9F0;
+border: 1px solid #FFD6E3;
+border-left: 1px solid #FFAFC8;
 padding: 20px;
 ```
 
 **Highlight/Info**:
 ```css
-background: #f8f9fa;
+background: #FFFFFF;
 border: 1px solid #e8e8e8;
-border-left: 1px solid #732982;
+border-left: 1px solid #74D7EE;
 padding: 20px;
 ```
 
 **Key Findings**:
 ```css
-background: #fef9e7;
-border-left: 1px solid #FFED00;
+background: #FFE9F0;
+border: 1px solid #FFD6E3;
+border-left: 1px solid #FFAFC8;
 padding: 20px;
 ```
 
@@ -363,7 +365,7 @@ padding: 20px;
 - Semantic HTML structure
 
 ### 5. Political Alignment
-- Pride flag colors reflect LGBTQI+ inclusivity
+- Trans pride flag colors center trans community solidarity and LGBTQI+ inclusivity
 - Anti-corporate: minimal, anti-flashy design
 - Transparency: clear information hierarchy
 - Accessibility: inclusive design for all users
@@ -386,7 +388,7 @@ padding: 20px;
 ### ✅ Always Do
 
 1. **Use 1px borders** for all dividing lines
-2. **Use pride colors** for interactive elements
+2. **Use trans pride colors** (light blue, pink, white) for interactive elements
 3. **Use light font weights** (300-500 range)
 4. **Maintain generous whitespace** around elements
 5. **Keep layouts simple** and predictable
@@ -401,7 +403,7 @@ padding: 20px;
 
 All HTML files should include:
 - Sticky header navigation with consistent styling
-- Pride flag color scheme throughout
+- Trans pride flag color scheme throughout
 - 1px borders only
 - Minimal, flat design aesthetic
 - Responsive meta viewport tag
@@ -413,14 +415,20 @@ When converting to HTML, maintain:
 - Simple table styling (1px borders)
 - Code blocks with dark background (#2d3748)
 - Consistent heading hierarchy
-- Link colors matching pride palette
+- Link colors matching trans pride palette (light blue, pink)
 
 ---
 
 ## Version History
 
+- **v1.1** (October 2025): Trans pride flag colors
+  - Updated from general pride flag to trans pride flag colors
+  - Light blue (#74D7EE), pink (#FFAFC8), white (#FFFFFF) as primary colors
+  - Centered trans community solidarity in design philosophy
+  - Updated all component examples with new color palette
+
 - **v1.0** (October 2025): Initial style guide
-  - Pride flag color palette established
+  - Pride flag color palette established (later updated to trans pride)
   - 1px border rule implemented
   - Minimal flat design aesthetic defined
   - Typography guidelines set

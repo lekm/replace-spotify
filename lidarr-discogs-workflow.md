@@ -412,12 +412,13 @@ Combine **manual scanning** with **automated Lidarr workflows** for optimal cont
 ### Annual Cost Comparison
 | Solution | Annual Cost (AUD) | Artist Compensation | Ethics Score |
 |----------|-------------------|---------------------|--------------|
-| **Spotify Premium** | $192 | $0.003/stream | 2/10 ❌ |
-| **Qobuz Studio** | $300-360 | $0.022/stream | 9/10 ✅ |
+| **Spotify Premium** | $191.88 | $0.003/stream | 2/10 ❌ |
+| **Qobuz Studio (monthly)** | $239.88 | $0.022/stream | 9/10 ✅ |
+| **Qobuz Studio (annual)** | $199.90 | $0.022/stream | 9/10 ✅ |
 | **Navidrome + VPS** | $96-141 | Direct purchases | 10/10 ✅ |
-| **Hybrid (Navidrome + Qobuz)** | $444-540 | Mixed | 10/10 ✅ |
+| **Hybrid (Navidrome + Qobuz annual)** | $296-341 | Mixed | 10/10 ✅ |
 
-**Savings**: Navidrome-only approach saves **$204-264/year** vs Qobuz Studio, **$96/year** vs Spotify
+**Savings**: Navidrome-only saves **$59-104/year** vs Qobuz annual, **$99-144/year** vs Qobuz monthly, **$51-96/year** vs Spotify
 
 ---
 

@@ -33,13 +33,13 @@ Find and implement music streaming/ownership solutions that:
 ## 🏆 Recommended Solutions
 
 ### Option 1: Qobuz (Pure Streaming)
-- **Cost**: $25-30 AUD/month
+- **Cost**: $19.99 AUD/month (or $16.66/month on annual plan)
 - **Ethics**: 9/10 - Best commercial option
 - **Quality**: Hi-res FLAC up to 24-bit/192kHz
 - **Cons**: Smallest catalog, CarPlay reliability issues
 
 ### Option 2: Navidrome Self-Hosted (Recommended)
-- **Cost**: $12-15 AUD/month (VPS) + music purchases
+- **Cost**: $6.73-10.47 AUD/month (VPS, native AUD pricing) + music purchases
 - **Ethics**: 10/10 - Complete control, support artists directly
 - **Quality**: Lossless (FLAC) from your own collection
 - **Pros**: Future-proof, privacy, superior CarPlay with play:Sub app
@@ -80,7 +80,7 @@ Physical Media → Discogs → Lidarr → Navidrome → play:Sub → CarPlay
 - **Lidarr**: Automated music acquisition for owned physical media
 - **Discogs**: Collection management and barcode scanning
 - **play:Sub**: iOS app with excellent CarPlay integration ($15)
-- **OVHcloud VPS**: Ethical hosting (Sydney datacenter, $12-15/month)
+- **OVHcloud VPS**: Ethical hosting (Sydney datacenter, $6.73-10.47 AUD/month native pricing)
 
 **Legal Status**: ✅ Format shifting is legal in Australia for owned physical media (Copyright Act 1968, Section 43C)
 

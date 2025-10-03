@@ -99,11 +99,13 @@
 *Prices verified October 2025*
 
 #### Self-Hosted Options (Annual Costs)
-- **OVHcloud VPS-1**: $6.12 AUD/month (ex GST) = ~$81/year (inc GST ~$89/year)
-- **OVHcloud VPS-2**: $9.52 AUD/month (ex GST) = ~$126/year (inc GST ~$139/year)
-- **Linode VPS**: $7.50 AUD/month = $90/year
+- **OVHcloud VPS-1**: $6.73 AUD/month (inc GST) = $80.76/year ✅ Native AUD pricing
+- **OVHcloud VPS-2**: $10.47 AUD/month (inc GST) = $125.64/year ✅ Native AUD pricing
+- **Linode Nanode**: ~$7.55 AUD/month* = ~$90.60/year *USD pricing, subject to exchange rates
 - **play:Sub app**: $15 AUD (one-time)
-- **Total**: $104-154 AUD/year + music purchases
+- **Total**: $96-141 AUD/year + music purchases
+
+*Non-OVHcloud prices are USD converted at Oct 2025 rates and will fluctuate*
 
 ## Recommended Solutions
 
@@ -129,12 +131,15 @@
 ### VPS Hosting Analysis (Melbourne, Australia)
 
 #### Ethical VPS Comparison
-| Provider | AUD/Month | Ethics Score | Notes |
-|----------|-----------|-------------|-------|
-| **OVHcloud Australia** | $6.12-9.52 (ex GST) | 8/10 | European company, Sydney datacenter, data sovereignty |
-| **Linode** | $7.50 | 7/10 | Cleanest US provider, adequate latency |
-| DigitalOcean | $9 | 5/10 | Mass layoffs, broken promises to employees |
-| Vultr | $9 | 6/10 | 2024 content rights overreach (resolved) |
+| Provider | AUD/Month | Ethics Score | Currency | Notes |
+|----------|-----------|-------------|----------|-------|
+| **OVHcloud VPS-1** | **$6.73** | 8/10 | ✅ Native AUD | European company, Sydney datacenter, data sovereignty |
+| **OVHcloud VPS-2** | **$10.47** | 8/10 | ✅ Native AUD | More RAM/CPU, same benefits as VPS-1 |
+| Linode Nanode | ~$7.55* | 7/10 | USD* | Cleanest US provider, adequate latency |
+| DigitalOcean | ~$9.06* | 5/10 | USD* | Mass layoffs, broken promises to employees |
+| Vultr Regular | ~$5.29* | 6/10 | USD* | Budget option, 2024 content rights overreach (resolved) |
+
+*USD pricing converted to AUD at Oct 2025 rate (1 USD = 1.51 AUD). These prices fluctuate with exchange rates. OVHcloud prices are native AUD and fixed.
 
 #### Latency from Melbourne
 - **OVHcloud Australia**: 10-20ms (Sydney local)

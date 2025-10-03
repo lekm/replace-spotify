@@ -33,11 +33,13 @@ Navidrome is a lightweight, self-hosted music streaming server that transforms y
 
 | Provider | RAM | CPU | Storage | Bandwidth | Cost/Month (AUD) | Ethics Score |
 |----------|-----|-----|---------|-----------|------------------|-------------|
-| **OVHcloud VPS-1** | 8GB | 4 vCPU | 75GB SSD NVMe | 400 Mbps | **$6.73** (inc GST) | 8/10 |
-| **OVHcloud VPS-2** | 12GB | 6 vCPU | 100GB SSD NVMe | 1 Gbps | **$10.47** (inc GST) | 8/10 |
-| Linode | 1GB | 1 vCPU | 25GB SSD | 1TB | $7.50 | 7/10 |
-| DigitalOcean | 1GB | 1 vCPU | 25GB SSD | 1TB | $9 | 5/10 |
-| Vultr | 1GB | 1 vCPU | 25GB SSD | 1TB | $9 | 6/10 |
+| **OVHcloud VPS-1** | 8GB | 4 vCPU | 75GB SSD NVMe | 400 Mbps | **$6.73** ✅ Native AUD | 8/10 |
+| **OVHcloud VPS-2** | 12GB | 6 vCPU | 100GB SSD NVMe | 1 Gbps | **$10.47** ✅ Native AUD | 8/10 |
+| Linode | 1GB | 1 vCPU | 25GB SSD | 1TB | ~$7.55* | 7/10 |
+| DigitalOcean | 1GB | 1 vCPU | 25GB SSD | 1TB | ~$9.06* | 5/10 |
+| Vultr | 1GB | 1 vCPU | 25GB SSD | 1TB | ~$9.06* | 6/10 |
+
+*USD pricing converted at Oct 2025 rate (1 USD = 1.51 AUD). These prices fluctuate with exchange rates. OVHcloud prices are native AUD and fixed.
 
 ---
 
@@ -109,11 +111,11 @@ Navidrome is a lightweight, self-hosted music streaming server that transforms y
 - Meets 2024 data sovereignty requirements
 
 #### **For Best Value + Acceptable Ethics**
-**Primary**: **Linode** ($5/month)
+**Primary**: **Linode** (~$7.55 AUD/month)
 - Cleanest record of the major US providers
 - Adequate latency (only 20ms worse than local)
 - Proven reliability and performance
-- Most cost-effective option
+- Competitive pricing (USD $5/month)
 
 #### **Avoid for Ethical Reasons**
 - **DigitalOcean**: Poor treatment of employees, problematic labor practices
@@ -199,10 +201,12 @@ Family Navidrome Server
 - **Year 2**: $81 + music purchases
 - **5 Years**: $405 + music purchases
 
-#### Linode 1GB Plan ($7.50/month AUD)
-- **Year 1**: $90 + music purchases
-- **Year 2**: $90 + music purchases
-- **5 Years**: $450 + music purchases
+#### Linode 1GB Plan (~$7.55 AUD/month)
+- **Year 1**: ~$91 AUD + music purchases
+- **Year 2**: ~$91 AUD + music purchases
+- **5 Years**: ~$453 AUD + music purchases
+
+*USD $5/month pricing, subject to exchange rate fluctuations*
 
 #### Benefits of VPS
 - **99.9% uptime** (much better than home internet)
@@ -262,7 +266,7 @@ For your use case (heavy CarPlay usage, need for good uptime), **VPS is recommen
 ## Setup Process Overview
 
 ### Phase 1: VPS Setup
-1. **Choose Provider**: Linode recommended ($5/month)
+1. **Choose Provider**: OVHcloud ($6.73 AUD/month) or Linode (~$7.55 AUD/month) recommended
 2. **Deploy Server**: Ubuntu 22.04 LTS recommended
 3. **Secure Server**: SSH keys, firewall, fail2ban
 4. **Install Dependencies**: Docker, FFmpeg
@@ -290,7 +294,7 @@ For your use case (heavy CarPlay usage, need for good uptime), **VPS is recommen
 ## Integration with Your Current Setup
 
 ### CarPlay Integration
-- **play:Sub**: $10, excellent CarPlay support, more reliable than Qobuz
+- **play:Sub**: $15 AUD, excellent CarPlay support, more reliable than Qobuz
 - **Amperfy**: Free, good but limited CarPlay navigation
 - **Offline Mode**: Download songs for areas with poor cell coverage
 
@@ -326,7 +330,7 @@ For your use case (heavy CarPlay usage, need for good uptime), **VPS is recommen
 ## Recommended Setup for Your Needs
 
 ### Optimal Configuration
-- **VPS**: Linode 1GB ($5/month) to start
+- **VPS**: OVHcloud VPS-1 ($6.73 AUD/month) or Linode (~$7.55 AUD/month) to start
 - **Storage**: Upgrade as collection grows
 - **iOS App**: play:Sub for best CarPlay experience
 - **Libraries**: Separate for your collection + shared family library
@@ -339,10 +343,10 @@ For your use case (heavy CarPlay usage, need for good uptime), **VPS is recommen
 4. **Family Integration**: Add other users once system is stable
 
 ### Total First Year Cost
-- **VPS Hosting**: $60 (Linode 1GB)
-- **play:Sub App**: $10 (one-time)
-- **Domain**: $15 (optional, for easy access)
+- **VPS Hosting**: $81-91 AUD (OVHcloud or Linode)
+- **play:Sub App**: $15 AUD (one-time)
+- **Domain**: $15 AUD (optional, for easy access)
 - **Music Purchases**: Variable (your choice)
-- **Total**: ~$85 + music purchases
+- **Total**: ~$111-121 AUD + music purchases
 
 This setup gives you professional-grade music streaming with complete privacy, excellent CarPlay integration, and alignment with your leftist values by reducing dependence on corporate streaming services.

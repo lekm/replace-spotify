@@ -180,10 +180,25 @@
 Therefore, rates shown in documentation should be understood as **ranges** or **representative examples** rather than fixed, universal values. Where possible, we cite multiple sources and show ranges.
 
 ### VPS Pricing Currency Conversions
-**Note**: VPS providers list prices in USD. AUD conversions are approximate and subject to exchange rate fluctuations. For accuracy:
-- OVHcloud Australia pricing is native AUD (most reliable)
-- Other providers: USD prices converted at time of access
-- GST may or may not be included in displayed prices
+**Exchange Rate Used**: 1 USD = 1.51 AUD (as of October 2, 2025)
+
+**Source**: [xe.com Historical Rates October 2, 2025](https://www.xe.com/currency-charts/USD-AUD)
+
+**Important Notes**:
+- **OVHcloud Australia**: Pricing is native AUD (A$6.73-10.47 inc GST) - no conversion needed, no exchange rate risk
+- **Linode**: USD $5/month = ~A$7.55 at Oct 2025 rate (subject to fluctuation)
+- **DigitalOcean**: USD $6/month = ~A$9.06 at Oct 2025 rate (subject to fluctuation)
+- **Vultr**: USD $3.50-6/month = ~A$5.29-9.06 at Oct 2025 rate (subject to fluctuation)
+
+**Exchange Rate Volatility (2025)**:
+- Best rate: 0.6683 (Sept 16) = 1 USD = 1.497 AUD
+- Worst rate: 0.5955 (April 8) = 1 USD = 1.679 AUD
+- Average: 0.641 = 1 USD = 1.560 AUD
+- **Implication**: USD pricing can vary ±10% in AUD terms over a year
+
+**GST Inclusion**:
+- OVHcloud: Prices shown include 10% GST (Australian requirement)
+- US providers (Linode, DigitalOcean, Vultr): No Australian GST collected
 
 ### Spotify Helsing Investment Amount Variations
 Multiple sources cite the investment as:

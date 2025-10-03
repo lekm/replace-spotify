@@ -16,6 +16,45 @@
             line-height: 1.6;
             color: #2c2c2c;
             background-color: #fdfdfd;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sticky Header Navigation */
+        .sticky-nav {
+            background: #1a1a1a;
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .sticky-nav h1 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .sticky-nav nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .sticky-nav a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .sticky-nav a:hover {
+            color: #66BB6A;
+        }
+
+        .content-wrapper {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
@@ -339,8 +378,18 @@
     </style>
 </head>
 <body>
+    <header class="sticky-nav">
+        <h1>🎵 Replace Spotify</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="spotify-alternatives-report.html">Full Analysis</a>
+            <a href="navidrome-setup-guide.html">Navidrome Setup</a>
+            <a href="https://github.com/lekm/replace-spotify" target="_blank">GitHub</a>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
     <div class="header">
-        <a href="spotify-alternatives-report.html" class="back-link">← Back to Main Report</a>
         <h1>Navidrome Complete Setup Guide</h1>
         <p class="subtitle">Your comprehensive guide to self-hosted music streaming with complete privacy and control</p>
     </div>
@@ -1023,6 +1072,7 @@
             <p>This setup gives you professional-grade music streaming with complete privacy, excellent CarPlay integration, and perfect alignment with your ethical values. The combination of Navidrome for owned music and strategic Qobuz use for discovery creates the ultimate ethical music solution.</p>
             <p><a href="spotify-alternatives-report.html" class="back-link">← Return to Main Report</a></p>
         </div>
+    </div>
     </div>
 </body>
 </html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Spotify - Ethical Music Streaming Research</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        /* Sticky Header */
+        header {
+            background: #1a1a1a;
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #66BB6A;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        .hero h2 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .hero p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .ethics-score {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .score-high { background: #4CAF50; color: white; }
+        .score-medium { background: #FF9800; color: white; }
+        .score-low { background: #f44336; color: white; }
+
+        .reports {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .report-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .report-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .report-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .report-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .report-card a {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .report-card a:hover {
+            background: #45a049;
+        }
+
+        .key-findings {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .key-findings h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+
+        .key-findings ul {
+            margin-left: 1.5rem;
+            color: #856404;
+        }
+
+        .key-findings li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            nav {
+                gap: 1rem;
+            }
+
+            .hero {
+                padding: 2rem 1.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎵 Replace Spotify - Ethical Music Research</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="spotify-alternatives-report.html">Full Analysis</a>
+            <a href="navidrome-setup-guide.html">Navidrome Setup</a>
+            <a href="https://github.com/lekm/replace-spotify" target="_blank">GitHub</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h2>Find Ethical Alternatives to Spotify</h2>
+            <p>Comprehensive research on music streaming services that prioritize artist compensation, align with leftist values, and provide superior technical capabilities.</p>
+
+            <div class="key-findings">
+                <h3>Why Replace Spotify?</h3>
+                <ul>
+                    <li><strong>Military Investment:</strong> CEO invested €600M in AI weapons company (Helsing)</li>
+                    <li><strong>Artist Censorship:</strong> Removed Palestinian artists under lobby pressure</li>
+                    <li><strong>Poor Compensation:</strong> $0.003/stream - among the lowest in the industry</li>
+                    <li><strong>Artist Boycotts:</strong> 400+ artists joined "No Music for Genocide" campaign</li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+            <h2 style="margin-bottom: 1.5rem; color: #1a1a1a;">📊 Top Recommendations</h2>
+
+            <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 2rem;">
+                <h3 style="color: #1a1a1a; margin-bottom: 1rem;">Ethics Scores (2024)</h3>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #ddd;">
+                            <th style="text-align: left; padding: 0.75rem;">Service</th>
+                            <th style="text-align: left; padding: 0.75rem;">Ethics Score</th>
+                            <th style="text-align: left; padding: 0.75rem;">Artist Pay/Stream</th>
+                            <th style="text-align: left; padding: 0.75rem;">Verdict</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem;"><strong>Navidrome (Self-hosted)</strong></td>
+                            <td style="padding: 0.75rem;"><span class="ethics-score score-high">10/10</span></td>
+                            <td style="padding: 0.75rem;">Direct purchases</td>
+                            <td style="padding: 0.75rem;">✅ Best</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem;"><strong>Qobuz</strong></td>
+                            <td style="padding: 0.75rem;"><span class="ethics-score score-high">9/10</span></td>
+                            <td style="padding: 0.75rem;">$0.022</td>
+                            <td style="padding: 0.75rem;">✅ Recommended</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem;"><strong>Apple Music</strong></td>
+                            <td style="padding: 0.75rem;"><span class="ethics-score score-medium">6/10</span></td>
+                            <td style="padding: 0.75rem;">$0.0056-$0.0078</td>
+                            <td style="padding: 0.75rem;">⚠️ Mixed</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem;"><strong>Tidal</strong></td>
+                            <td style="padding: 0.75rem;"><span class="ethics-score score-medium">4/10</span></td>
+                            <td style="padding: 0.75rem;">$0.013</td>
+                            <td style="padding: 0.75rem;">⚠️ Avoid</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.75rem;"><strong>YouTube Music</strong></td>
+                            <td style="padding: 0.75rem;"><span class="ethics-score score-low">3/10</span></td>
+                            <td style="padding: 0.75rem;">$0.0027</td>
+                            <td style="padding: 0.75rem;">❌ Avoid</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem;"><strong>Spotify</strong></td>
+                            <td style="padding: 0.75rem;"><span class="ethics-score score-low">2/10</span></td>
+                            <td style="padding: 0.75rem;">$0.003-$0.004</td>
+                            <td style="padding: 0.75rem;">❌ Avoid</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="margin-bottom: 1.5rem; color: #1a1a1a;">📖 Documentation</h2>
+            <div class="reports">
+                <div class="report-card">
+                    <h3>Complete Analysis Report</h3>
+                    <p>Full ethical analysis of all major streaming platforms, including corporate ethics, artist compensation, and political alignment.</p>
+                    <a href="spotify-alternatives-report.html">Read Full Report →</a>
+                </div>
+
+                <div class="report-card">
+                    <h3>Navidrome Setup Guide</h3>
+                    <p>Step-by-step guide to self-hosting your music collection with Navidrome, including VPS setup, CarPlay integration, and cost analysis.</p>
+                    <a href="navidrome-setup-guide.html">Setup Guide →</a>
+                </div>
+
+                <div class="report-card">
+                    <h3>GitHub Repository</h3>
+                    <p>Access all markdown documentation, contribute corrections, or explore future research workflows on GitHub.</p>
+                    <a href="https://github.com/lekm/replace-spotify" target="_blank">View on GitHub →</a>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 3rem; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+            <h2 style="color: #1a1a1a; margin-bottom: 1rem;">💰 Cost Comparison (AUD/year)</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                    <strong>Spotify Premium:</strong> $192/year
+                    <span class="ethics-score score-low">2/10</span>
+                </li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                    <strong>Qobuz Studio:</strong> $300-360/year
+                    <span class="ethics-score score-high">9/10</span>
+                </li>
+                <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                    <strong>Navidrome + VPS:</strong> $144-180/year
+                    <span class="ethics-score score-high">10/10</span>
+                </li>
+                <li style="padding: 0.5rem 0;">
+                    <strong>Hybrid (Navidrome + Qobuz):</strong> $444-540/year
+                    <span class="ethics-score score-high">10/10</span>
+                </li>
+            </ul>
+            <p style="margin-top: 1rem; color: #666; font-style: italic;">
+                Savings: Navidrome-only saves $156-216/year vs Qobuz, with maximum ethical alignment and artist support.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with leftist values: Support artists, resist corporate exploitation, own your culture.</p>
+        <p style="margin-top: 0.5rem; color: #999;">Last Updated: October 2024</p>
+    </footer>
+</body>
+</html>

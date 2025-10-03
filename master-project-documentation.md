@@ -97,10 +97,11 @@
 - **YouTube Music**: $12/month = $144/year
 
 #### Self-Hosted Options (Annual Costs)
+- **OVHcloud VPS-1**: $6.12 AUD/month (ex GST) = ~$81/year (inc GST ~$89/year)
+- **OVHcloud VPS-2**: $9.52 AUD/month (ex GST) = ~$126/year (inc GST ~$139/year)
 - **Linode VPS**: $7.50 AUD/month = $90/year
-- **OVHcloud Australia**: $12-15 AUD/month = $144-180/year
 - **play:Sub app**: $15 AUD (one-time)
-- **Total**: $105-195 AUD/year + music purchases
+- **Total**: $104-154 AUD/year + music purchases
 
 ## Recommended Solutions
 
@@ -121,14 +122,14 @@
 - **Maximum Ethics**: Highest artist compensation + direct purchases
 - **Superior CarPlay**: play:Sub more reliable than Qobuz native app
 - **Future-Proof**: Own music regardless of service changes
-- **Cost-Effective**: $159-195 AUD/year vs $300-360 for Qobuz alone
+- **Cost-Effective**: $104-154 AUD/year vs $300-360 for Qobuz alone
 
 ### VPS Hosting Analysis (Melbourne, Australia)
 
 #### Ethical VPS Comparison
 | Provider | AUD/Month | Ethics Score | Notes |
 |----------|-----------|-------------|-------|
-| **OVHcloud Australia** | $12-15 | 8/10 | European company, Sydney datacenter, data sovereignty |
+| **OVHcloud Australia** | $6.12-9.52 (ex GST) | 8/10 | European company, Sydney datacenter, data sovereignty |
 | **Linode** | $7.50 | 7/10 | Cleanest US provider, adequate latency |
 | DigitalOcean | $9 | 5/10 | Mass layoffs, broken promises to employees |
 | Vultr | $9 | 6/10 | 2024 content rights overreach (resolved) |
@@ -139,7 +140,7 @@
 - **Verdict**: Negligible impact for music streaming
 
 #### Recommendation
-**For Maximum Ethics**: OVHcloud Australia ($144-180 AUD/year)
+**For Maximum Ethics**: OVHcloud Australia VPS-1 or VPS-2 ($89-139 AUD/year inc GST)
 - Data sovereignty under Australian law
 - European privacy protections
 - Zero latency concerns

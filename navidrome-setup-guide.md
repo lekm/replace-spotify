@@ -29,14 +29,15 @@ Navidrome is a lightweight, self-hosted music streaming server that transforms y
 - **SSD Storage**: Much better performance than HDD
 - **IPv4 Address**: For remote access
 
-### VPS Cost Comparison (2024)
+### VPS Cost Comparison (2025)
 
-| Provider | RAM | CPU | Storage | Bandwidth | Cost/Month | Ethics Score |
-|----------|-----|-----|---------|-----------|------------|-------------|
-| **Linode** | 1GB | 1 vCPU | 25GB SSD | 1TB | **$5** | 7/10 |
-| DigitalOcean | 1GB | 1 vCPU | 25GB SSD | 1TB | $6 | 5/10 |
-| Vultr | 1GB | 1 vCPU | 25GB SSD | 1TB | $6 | 6/10 |
-| **Vultr (Ultra-Budget)** | 512MB | 1 vCPU | 10GB SSD | 0.5TB | **$2.50** | 6/10 |
+| Provider | RAM | CPU | Storage | Bandwidth | Cost/Month (AUD) | Ethics Score |
+|----------|-----|-----|---------|-----------|------------------|-------------|
+| **OVHcloud VPS-1** | 8GB | 4 vCPU | 75GB SSD NVMe | 400 Mbps | **$6.73** (inc GST) | 8/10 |
+| **OVHcloud VPS-2** | 12GB | 6 vCPU | 100GB SSD NVMe | 1 Gbps | **$10.47** (inc GST) | 8/10 |
+| Linode | 1GB | 1 vCPU | 25GB SSD | 1TB | $7.50 | 7/10 |
+| DigitalOcean | 1GB | 1 vCPU | 25GB SSD | 1TB | $9 | 5/10 |
+| Vultr | 1GB | 1 vCPU | 25GB SSD | 1TB | $9 | 6/10 |
 
 ---
 
@@ -88,7 +89,8 @@ Navidrome is a lightweight, self-hosted music streaming server that transforms y
 ##### **OVHcloud Australia** (Recommended Australian Option)
 - **Location**: Sydney datacenter
 - **Data Sovereignty**: Meets local residency requirements
-- **Cost**: ~$8-12/month for comparable specs
+- **Cost**: $6.12-9.52/month ex GST ($6.73-10.47 inc GST)
+- **Specs**: VPS-1: 8GB RAM, 4 vCPU, 75GB SSD | VPS-2: 12GB RAM, 6 vCPU, 100GB SSD
 - **Ethics**: European company, no major controversies
 - **Performance**: Excellent for Australian users
 
@@ -100,7 +102,7 @@ Navidrome is a lightweight, self-hosted music streaming server that transforms y
 ### Updated Recommendation Based on Ethics + Location
 
 #### **For Maximum Ethics + Australian Data Sovereignty**
-**Primary**: **OVHcloud Australia** (~$10/month)
+**Primary**: **OVHcloud Australia VPS-1** (~$6.73/month inc GST)
 - Local data protection under Australian law
 - European company with better privacy record
 - Excellent latency for Melbourne users
@@ -192,10 +194,15 @@ Family Navidrome Server
 
 ### VPS Hosting Costs (Annual)
 
-#### Linode 1GB Plan ($5/month)
-- **Year 1**: $60 + music purchases
-- **Year 2**: $60 + music purchases
-- **5 Years**: $300 + music purchases
+#### OVHcloud VPS-1 (Best Value - $6.73/month inc GST)
+- **Year 1**: $81 + music purchases
+- **Year 2**: $81 + music purchases
+- **5 Years**: $405 + music purchases
+
+#### Linode 1GB Plan ($7.50/month AUD)
+- **Year 1**: $90 + music purchases
+- **Year 2**: $90 + music purchases
+- **5 Years**: $450 + music purchases
 
 #### Benefits of VPS
 - **99.9% uptime** (much better than home internet)

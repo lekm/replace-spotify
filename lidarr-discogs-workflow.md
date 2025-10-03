@@ -58,7 +58,7 @@
 | **Lidarr Discogs Plugin** | Auto-sync Discogs collection | Free | ⚠️ PR pending |
 | **Navidrome** | Self-hosted music streaming | Free (open source) | ✅ Available |
 | **play:Sub** | iOS app for CarPlay | $15 AUD one-time | ✅ Available |
-| **OVHcloud VPS** | Server hosting (Sydney) | $12-15 AUD/month | ✅ Available |
+| **OVHcloud VPS** | Server hosting (Sydney) | $6.12-9.52 AUD/month (ex GST) | ✅ Available |
 
 ---
 
@@ -70,7 +70,7 @@
 #### Step 1.1: VPS Server Setup
 **Location**: OVHcloud Australia (Sydney datacenter)
 **Duration**: 1-2 hours
-**Cost**: $12-15 AUD/month
+**Cost**: $6.12-9.52 AUD/month (ex GST), ~$6.73-10.47 inc GST
 
 **Actions**:
 1. Create OVHcloud account
@@ -405,19 +405,19 @@ Combine **manual scanning** with **automated Lidarr workflows** for optimal cont
 ### Monthly Ongoing Costs
 | Item | Cost (AUD/month) | Required? |
 |------|------------------|-----------|
-| OVHcloud VPS | $12-15 | ✅ Yes |
+| OVHcloud VPS | $6.73-10.47 (inc GST) | ✅ Yes |
 | Electricity (VPS) | $0 (included) | - |
-| **Total** | **$12-15** | - |
+| **Total** | **$6.73-10.47** | - |
 
 ### Annual Cost Comparison
 | Solution | Annual Cost (AUD) | Artist Compensation | Ethics Score |
 |----------|-------------------|---------------------|--------------|
 | **Spotify Premium** | $192 | $0.003/stream | 2/10 ❌ |
 | **Qobuz Studio** | $300-360 | $0.022/stream | 9/10 ✅ |
-| **Navidrome + VPS** | $144-180 | Direct purchases | 10/10 ✅ |
+| **Navidrome + VPS** | $96-141 | Direct purchases | 10/10 ✅ |
 | **Hybrid (Navidrome + Qobuz)** | $444-540 | Mixed | 10/10 ✅ |
 
-**Savings**: Navidrome-only approach saves **$156-216/year** vs Qobuz Studio
+**Savings**: Navidrome-only approach saves **$204-264/year** vs Qobuz Studio, **$96/year** vs Spotify
 
 ---
 
